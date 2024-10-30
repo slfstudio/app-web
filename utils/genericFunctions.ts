@@ -98,40 +98,40 @@ export const getInsuranceLogo = (insuranceId: number) => {
   let logo = null;
   switch (insuranceId) {
     case 1:
-      logo = require('../../assets/images/insurances/aba.png');
+      logo = require('../assets/images/insurances/aba.png');
       break;
     case 2:
-      logo = require('../../assets/images/insurances/aig.png');
+      logo = require('../assets/images/insurances/aig.png');
       break;
     case 3:
-      logo = require('../../assets/images/insurances/ana.png');
+      logo = require('../assets/images/insurances/ana.png');
       break;
     case 5:
-      logo = require('../../assets/images/insurances/gnp.png');
+      logo = require('../assets/images/insurances/gnp.png');
       break;
     case 6:
-      logo = require('../../assets/images/insurances/hdi.png');
+      logo = require('../assets/images/insurances/hdi.png');
       break;
     case 7:
-      logo = require('../../assets/images/insurances/mapfre.png');
+      logo = require('../assets/images/insurances/mapfre.png');
       break;
     case 9:
-      logo = require('../../assets/images/insurances/qualitas.png');
+      logo = require('../assets/images/insurances/qualitas.png');
       break;
     case 10:
-      logo = require('../../assets/images/insurances/sura.png');
+      logo = require('../assets/images/insurances/sura.png');
       break;
     case 11:
-      logo = require('../../assets/images/insurances/seguros_atlas.png');
+      logo = require('../assets/images/insurances/seguros_atlas.png');
       break;
     case 12:
-      logo = require('../../assets/images/insurances/seguros_centauro.png');
+      logo = require('../assets/images/insurances/seguros_centauro.png');
       break;
     case 15:
-      logo = require('../../assets/images/insurances/inbursa.png');
+      logo = require('../assets/images/insurances/inbursa.png');
       break;
     default:
-      logo = require('../../assets/images/insurances/imageDefault.png');
+      logo = require('../assets/images/insurances/imageDefault.png');
       break;
   }
   return logo;
@@ -142,22 +142,22 @@ export const getPolicyIcon = (type: number) => {
 
   switch (type) {
     case 1:
-      logo = 'Home'; //equire('../../assets/healthCircle.png');
+      logo = 'Home'; //equire('../assets/healthCircle.png');
       break;
     case 2:
-      logo = 'Home'; //require('../../assets/carCircle.png');
+      logo = 'Home'; //require('../assets/carCircle.png');
       break;
     case 3:
-      logo = 'Home'; //require('../../assets/carCircle.png');
+      logo = 'Home'; //require('../assets/carCircle.png');
       break;
     case 4:
-      logo = 'Home'; //require('../../assets/healthCircle.png');
+      logo = 'Home'; //require('../assets/healthCircle.png');
       break;
     case 5:
-      logo = 'Home'; //require('../../assets/lifeCircle.png');
+      logo = 'Home'; //require('../assets/lifeCircle.png');
       break;
     default:
-      logo = 'Home'; //require('../../assets/imageDefault.png');
+      logo = 'Home'; //require('../assets/imageDefault.png');
       break;
   }
   return logo;
