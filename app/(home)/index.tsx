@@ -10,29 +10,24 @@ import CardImg from '@/components/CardImg';
 import familyImg from '@/assets/images/cards/family.png'
 import Button from '@/components/Button'
 import { useNavigation } from 'expo-router';
+import CircleImages from '@/components/CircleImages';
 export default function HomeScreen() {
   const {t} = useTranslation()
   const {navigate} = useNavigation<any>()
   return (
-    <View className='flex-1'>
-      <Text variant='Body-Small-Medium' className='text-dark'>holaaa aqui va la nav barr</Text>
       <View className='flex-1'>
           <View className='flex-row h-[50%]'>
               <View className='flex-1 items-center  justify-center p-[20px]'>
                 <Text variant='Heading-H6' className='text-dark'>{t('regards.good_morning')}</Text>
                 <Spacing/>
                 <Text>{t('text.secure_your_peace_of_mind_with_a_quick')}</Text>
+                <Spacing/>
+                <Button text={t('headers.quote_your_insurance')} onPress={()=>navigate('(insuranceHomeStack)')}/>
               </View>
               <View className='flex-1 '>
-                <View className='flex-1'>
-                <Image source={beachImg} className=' rounded-[100%] absolute ' style={{width:200, height:200, right:480, top:55}}/>
-                </View>
-                <View><Image source={churchImg} className=' rounded-[100%] absolute ' style={{width:200, height:200, right:600, top:-195}}/></View>
-                <View>
-                <Image source={workingImg} className=' rounded-full absolute ' style={{width:300, height:400, right:120, top:-350}}/>
-                </View>
+              <CircleImages image={beachImg} imagetwo={churchImg} imagethree={workingImg}/>
               </View>
-              <Button text='Hola' onPress={()=>navigate('(insuranceHomeStack)')}/>
+              
           </View>
           <View className='p-[20px]'>
             <Text variant='Heading-H5' className='text-dark' >Discover our benefits</Text>
@@ -68,7 +63,6 @@ export default function HomeScreen() {
 
           </View>
       </View>
-    </View>
   );
 }
 
