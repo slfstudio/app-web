@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import * as WebBrowser from 'expo-web-browser';
 import * as Google from 'expo-auth-session/providers/google';
 import { useEffect, useState } from 'react';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from 'expo-router';
 import { useDispatch } from 'react-redux';
 import { fetchLoginGoogle } from '@/store/reducer/userReducer';
 WebBrowser.maybeCompleteAuthSession();

@@ -1,5 +1,6 @@
 import { colors, typography } from '@/config';
 import HeaderLeft from './HeaderLeft';
+import Header from '../Header';
 import { Image } from 'expo-image';
 import { StyleSheet, View } from 'react-native';
 import headerImg from '@/assets/images/header/header.png';

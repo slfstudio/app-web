@@ -1,6 +1,5 @@
 import Background from '@/components/Background';
 import { useTranslation } from 'react-i18next';
-import { useNavigation } from '@react-navigation/native';
 import { useDispatch } from 'react-redux';
 import { View } from 'react-native';
 import { Formik } from 'formik';
@@ -14,6 +13,8 @@ import { setQuoteUser } from '@/store/reducer/catalogsCarReducer';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 import { formatUserDate } from '@/utils/datesUtils';
+import { useNavigation } from 'expo-router';
+import Text from '@/components/Text';
 //personal info car
 export default function InsureCarScreen() {
   const { t } = useTranslation();
@@ -46,6 +47,12 @@ export default function InsureCarScreen() {
       {/* <InsureForms variant="car_form" onPress={nextStep} /> */}
       <View className="flex-1 pb-2xl justify-between">
         {/* form */}
+        <Text>{t('label.step_2')}</Text>
+        {/* Dylan Cambiar nombre del titulo */}
+        <Text variant="Body-Medium-Bold" className="text-dark">
+          {t('label.general_information')}
+        </Text>
+        <Spacing />
         <Formik
           validationSchema={carFormValidationSchema}
           initialValues={initialValues}

@@ -8,9 +8,11 @@ import { useTranslation } from 'react-i18next';
 import Spacing from '@/components/Spacing';
 import CardImg from '@/components/CardImg';
 import familyImg from '@/assets/images/cards/family.png'
-
+import Button from '@/components/Button'
+import { useNavigation } from 'expo-router';
 export default function HomeScreen() {
   const {t} = useTranslation()
+  const {navigate} = useNavigation<any>()
   return (
     <View className='flex-1'>
       <Text variant='Body-Small-Medium' className='text-dark'>holaaa aqui va la nav barr</Text>
@@ -30,6 +32,7 @@ export default function HomeScreen() {
                 <Image source={workingImg} className=' rounded-full absolute ' style={{width:300, height:400, right:120, top:-350}}/>
                 </View>
               </View>
+              <Button text='Hola' onPress={()=>navigate('(insuranceHomeStack)')}/>
           </View>
           <View className='p-[20px]'>
             <Text variant='Heading-H5' className='text-dark' >Discover our benefits</Text>

@@ -7,7 +7,7 @@ import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
 import { WebScreen } from './ViewPDF';
 import { Icon } from '../Icon';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import HeaderLeft from '../navigation/HeaderLeft';
 import { colors } from '@/config';

@@ -24,7 +24,7 @@ export default function RadioButton({ value = false, text = '', onValueChange, v
 
   return (
     <TouchableOpacity className="flex-row items-center" onPress={() => onValueChange?.(false)}>
-      <View className={`${getStyle()} h-[20] w-[20] items-center justify-center bg-pink-light`}>
+      <View className={`${getStyle()} h-[20px] w-[20px] items-center justify-center bg-pink-light`}>
         <View className={`${value ? borderSize.active : borderSize.disabled} bg-white ${getStyle(true)}`}>
           {variant === 'square' && <Icon name="Checkmark" fill="white" size={12} />}
           {variant === 'squareWhite' && <Icon name="Checkmark" fill={colors.dark3} size={12} />}

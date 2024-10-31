@@ -3,30 +3,44 @@ import Spacing from "../Spacing";
 import imagenn from '@/assets/images/cards/keyhouse.png'
 import { SquareImagesProps } from "./types";
 
-export default function SquareImages({image, imageTwo, imageThree, imageFour}:SquareImagesProps){
-    return(
-        <View className="flex-row p-[20px] w-[50%] h-[100%]">
-            <View className="flex-1">
-                <View className=" h-[35%] w-[100%] rounded-[16px] overflow-hidden">
-                    <Image className="flex-1" source={image}/>
+export default function SquareImages({image, imageTwo, imageThree, imageFour}:SquareImagesProps) {
+    return (
+        <View className=" flex-row gap-2">
+            {/* Left column */}
+            <View className="flex-1 gap-2">
+                <View className="flex-[0.35] rounded-[16px] overflow-hidden">
+                    <Image 
+                        className="h-full w-full" 
+                        source={image}
+                        resizeMode="cover"
+                    />
                 </View>
-                <Spacing/>
-                <View className=" h-[60%] w-[100%] rounded-[16px] overflow-hidden">
-                    <Image className="flex-1" resizeMode="cover" source={imageTwo}/>
+                <View className="flex-[0.65] rounded-[16px] overflow-hidden">
+                    <Image 
+                        className="h-full w-full" 
+                        source={imageTwo}
+                        resizeMode="cover"
+                    />
                 </View>
             </View>
-            <Spacing horizontal/>
-            <View className="flex-1">
-            <View className="  h-[60%] w-[100%] rounded-[16px] overflow-hidden">
-                <Image className="flex-1" resizeMode="cover" source={imageThree}/>
-            </View>
-                <Spacing/>
-                <View className=" h-[35%] w-[100%] rounded-[16px] overflow-hidden">
-                    <Image className="flex-1" resizeMode="cover" source={imageFour}/>
+            
+            {/* Right column */}
+            <View className="flex-1 gap-2">
+                <View className="flex-[0.65] rounded-[16px] overflow-hidden">
+                    <Image 
+                        className="h-full w-full" 
+                        source={imageThree}
+                        resizeMode="cover"
+                    />
                 </View>
-
+                <View className="flex-[0.35] rounded-[16px] overflow-hidden">
+                    <Image 
+                        className="h-full w-full" 
+                        source={imageFour}
+                        resizeMode="cover"
+                    />
+                </View>
             </View>
-
         </View>
     )
 }

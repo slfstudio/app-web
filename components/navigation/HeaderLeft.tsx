@@ -1,6 +1,6 @@
 import { Pressable, View } from 'react-native';
 import { Icon } from '../Icon';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from 'expo-router';
 
 interface HeaderLeftProps {
   iconColor?: string;
