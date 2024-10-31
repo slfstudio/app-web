@@ -8,7 +8,7 @@ const getEnv = (prod: boolean = false) => {
   if (prod) {
     return Platform.OS === 'android' ? 'http://198.72.127.65' : 'https://bts_services.bajatuseguro.com';
   }
-  return Platform.OS === 'android' ? 'http://198.72.127.94:450' : 'https://dev_bts_services.bajatuseguro.com';
+  return  'https://dev_bts_services.bajatuseguro.com';
 };
 const api = axios.create({
   baseURL: getEnv(false),

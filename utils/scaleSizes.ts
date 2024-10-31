@@ -1,6 +1,6 @@
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 
-const BASE_SCREEN_WIDTH = 320;
+const BASE_SCREEN_WIDTH = Platform.OS === 'web' ? 1024 : 320;
 
 export function scaleWidth(widthToScale: number) {
   return (Dimensions.get('screen').width / BASE_SCREEN_WIDTH) * widthToScale;
