@@ -53,7 +53,9 @@
     "coverage_500000_usd_Worldwide_coverage_up_to_your_sum_insured_limit_except_in_the_us":"Coverage 500,000 USD\n•Worldwide coverage up to your Sum Insured limit, except in the US.\n•Guaranteed lifetime renewal.\n•Deductible waiver in case of severe accidents.",
     "policy_fee_included_on_the_1st_modal_premium":"Tarifa de poliza incluida en primera opción de premium.",
     "would_you_like_to_add_a_dental_policy_for":"¿Le gustaría agregar una póliza dental por",
-    "if_you_delete_your_account":"Si eliminas tu cuenta, perderás el acceso a tus pólizas."
+    "if_you_delete_your_account":"Si eliminas tu cuenta, perderás el acceso a tus pólizas.",
+    "we_have_a_digital_platform_specialized_in_offering_medical_expenses":"Contamos con una plataforma digital especializada en ofrecer pólizas de Gastos Médicos, Daños a la Propiedad y Seguros de Auto, diseñadas específicamente para expatriados que residen o se encuentran temporalmente en México."
+
   },
   "headers": {
     "quote_your_insurance": "Cotiza tu seguro",
@@ -100,6 +102,8 @@
     "cars":"Seguro de auto",
     "health":"Seguro de salud",
     "home":"Seguro de casa",
-    "life":"Seguro de vida"
+    "life":"Seguro de vida",
+    "major_health_insurance_long_term":"Seguro Médico Mayor a Largo Plazo",
+    "travel_assist_health_insurance_short_term":"Seguro medico de asistencia durante viajes a corto plazo"
   }
 }
