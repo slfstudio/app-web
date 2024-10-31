@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import Button from '@/components/Button';
 import Text from '@/components/Text';
 import Spacing from '@/components/Spacing';
@@ -10,6 +9,7 @@ import PhotoModal from '@/components/PhotoModal';
 import { fetchQuoteContact, fetchQuoteCar, fetchQuoteSend, setRestErrorCar } from '@/store/reducer/catalogsCarReducer';
 import Loading from '@/components/Loading';
 import ErrorModal from '@/components/ErrorModal';
+import { useFocusEffect, useNavigation } from 'expo-router';
 
 export default function YourQuoteScreen() {
   const preventReload = useRef(false);

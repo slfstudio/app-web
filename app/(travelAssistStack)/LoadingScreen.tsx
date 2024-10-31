@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigation } from '@react-navigation/native';
 import { useDispatch } from 'react-redux';
 
 import { fetchQuoteTravelActions } from '@/store/reducer/travelAssistReducer';
@@ -8,6 +7,7 @@ import { View } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import ErrorModal from '@/components/ErrorModal';
 import { messager } from '@/store/reducer/messagerReducer';
+import { useNavigation } from 'expo-router';
 
 const LoadingFetch: React.FC = () => {
   const { t } = useTranslation();

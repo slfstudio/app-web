@@ -1,44 +1,43 @@
-import React, { useState, useCallback, useLayoutEffect } from 'react';
 import Background from '@/components/Background';
 import StepProgress from '@/components/StepProgress';
-import TravelAssistStepTwo from './TravelAssistStepTwo';
-import TravelAssistStepThree from './TravelAssistStepThree';
+import MajorHealthStepOne from './MajorHealthStepOne';
+import MajorHealthStepTwo from './MajorHealthStepTwo';
+import React, { useCallback, useLayoutEffect, useState } from 'react';
 import HeaderLeft from '@/components/navigation/HeaderLeft';
 import { colors } from '@/config';
-import TravelAssistStepOne from './TravelAssistStepOne';
+import { useDispatch } from 'react-redux';
+import { resetMajorHealthState } from '@/store/reducer/majorHealthReducer';
 import { View } from 'react-native';
 import Text from '@/components/Text';
 import Spacing from '@/components/Spacing';
 import Paper from '@/components/Paper';
 import SquareImages from '@/components/SquareImages';
-import img1 from '@/assets/images/travelAssist/window.png'
-import img2 from   '@/assets/images/travelAssist/church.png'
-import img3 from   '@/assets/images/travelAssist/plane.png'
-import img4 from   '@/assets/images/travelAssist/beach.png'
-import { useTranslation } from 'react-i18next';
+import img1 from '@/assets/images/majorHealth/handshake.png'
+import img2 from   '@/assets/images/majorHealth/doctors.png'
+import img3 from   '@/assets/images/majorHealth/dentist.png'
+import img4 from   '@/assets/images/majorHealth/medical.png'
 import { useNavigation } from 'expo-router';
+import { useTranslation } from 'react-i18next';
+import InsureHomeScreen from './InsureHomeScreen';
+import HomeInfoScreen from './HomeInfoScreen';
 
-export default function TravelSteps() {
+export default function InsuranceHomeSteps() {
   const [currentStep, setCurrentStep] = useState(0);
-  const navigation = useNavigation();
-  const {t} = useTranslation();
-  const steps = [
-    <TravelAssistStepOne onStepChange={() => changeStep(1)} />,
-    <TravelAssistStepTwo onStepChange={() => changeStep(2)} />,
-    <TravelAssistStepThree onStepChange={() => changeStep(0)} />,
-  ];
-
+  const {t} = useTranslation()
+  const navigation = useNavigation<any>();
+  const steps = [<InsureHomeScreen onStepChange={() => changeStep(1)} />, <HomeInfoScreen />];
+  const dispatch = useDispatch();
   const changeStep = (newStep: number) => {
     if (newStep >= 0 && newStep < steps.length) {
       setCurrentStep(newStep);
     }
   };
-
   const goBack = useCallback(() => {
     if (currentStep > 0) {
+      dispatch(resetMajorHealthState());
       changeStep(currentStep - 1);
     } else {
-      // navigation.navigate();
+      navigation.goBack();
     }
   }, [currentStep, navigation]);
 
@@ -48,7 +47,6 @@ export default function TravelSteps() {
       headerLeft: () => <HeaderLeft isMenu={false} iconColor={colors.white} onPress={goBack} />,
     });
   }, [navigation, goBack]);
-
   return (
     <Background>
       <View className="flex-1 flex-row">
@@ -58,7 +56,7 @@ export default function TravelSteps() {
           </Text>
           <Spacing />
           <Paper>
-            <StepProgress steps={steps} currentStep={currentStep} />
+            <StepProgress steps={steps} currentStep={currentStep} onStepChange={changeStep} />;
           </Paper>
         </View>
         <View className="flex-1 hidden md:flex">

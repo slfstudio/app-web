@@ -1,8 +1,5 @@
 import Background from '@/components/Background';
-import Paper from '@/components/Paper';
 import { useTranslation } from 'react-i18next';
-import InsureForms from '@/components/InsureForms';
-import { useNavigation } from '@react-navigation/native';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
@@ -19,11 +16,8 @@ import { View } from 'react-native';
 import Spacing from '@/components/Spacing';
 import Button from '@/components/Button';
 import Dropdown from '@/components/Dropdown';
-import Input from '@/components/Input';
-import Switch from '@/components/Switch';
-import { colors } from '@/config';
-import RadioButton from '@/components/RadioButton';
-import Text from '@/components/Text';
+import { useNavigation } from 'expo-router';
+
 
 export default function QuoteCarScreen() {
   const { t } = useTranslation();

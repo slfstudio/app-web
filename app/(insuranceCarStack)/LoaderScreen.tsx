@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigation } from '@react-navigation/native';
+
 import { useDispatch } from 'react-redux';
 import Loading from '@/components/Loading';
 import { View } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import ErrorModal from '@/components/ErrorModal';
 import { fetchQuoteCar } from '@/store/reducer/catalogsCarReducer';
+import { useNavigation } from 'expo-router';
 
 const LoaderScreen: React.FC = () => {
   const { t } = useTranslation();

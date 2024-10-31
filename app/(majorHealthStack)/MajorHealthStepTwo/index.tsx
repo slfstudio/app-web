@@ -10,10 +10,10 @@ import Button from '@/components/Button';
 import { View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
-import { useNavigation } from '@react-navigation/native';
 import ErrorModal from '@/components/ErrorModal';
 import React, { useState } from 'react';
 import { fetchShowCouteActions } from '@/store/reducer/majorHealthReducer';
+import { useNavigation } from 'expo-router';
 
 
 export default function MajorHealthStepTwo() {

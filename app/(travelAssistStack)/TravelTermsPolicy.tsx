@@ -3,14 +3,14 @@ import Spacing from '@/components/Spacing';
 import Text from '@/components/Text';
 import Button from '@/components/Button';
 import { useTranslation } from 'react-i18next';
-import { useNavigation, useNavigationState } from '@react-navigation/native';
+import { useNavigation, useRootNavigationState } from 'expo-router';
 import { View } from 'react-native';
 import { useEffect, useState } from 'react';
 
 export default function TravelTermsPolicy() {
   const { t } = useTranslation();
   const { navigate } = useNavigation<any>();
-  const state = useNavigationState((state) => state);
+  const state = useRootNavigationState();
   const [isTab, setIsTab] = useState<boolean>(false);
 
   useEffect(() => {

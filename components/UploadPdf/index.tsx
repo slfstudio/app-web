@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Icon } from '@/components/Icon';
 import Text from '@/components/Text';
 import { useActionSheet } from '@expo/react-native-action-sheet';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from 'expo-router';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { formatDate } from '@/utils/datesUtils';

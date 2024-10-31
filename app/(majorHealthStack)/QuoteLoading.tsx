@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigation } from '@react-navigation/native';
 import { useDispatch, useSelector } from 'react-redux';
 import Loading from '@/components/Loading';
 import { View } from 'react-native';
@@ -7,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import ErrorModal from '@/components/ErrorModal';
 import { RootState } from '@/store/store';
 import { wait } from '@/utils/generalFuncions';
+import { useNavigation } from 'expo-router';
 
 const LoadingFetch: React.FC = () => {
   const { t } = useTranslation();
@@ -17,6 +17,7 @@ const LoadingFetch: React.FC = () => {
   useEffect(() => {
     if(!fetching && pdfUri){
       wait(500).then(()=>{
+        // Agregar navegacion de pdf
         navigation.navigate('QuoteMajorInfoPdf',{urlPdf:pdfUri})
       })
     }else if(!fetching && !pdfUri){

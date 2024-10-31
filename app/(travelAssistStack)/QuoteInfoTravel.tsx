@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import Button from '@/components/Button';
 import { View } from 'react-native';
 import ExpandableTravelInfo from '@/components/ExpandableTravelInfo';
-import { useNavigation, useNavigationState, useFocusEffect } from '@react-navigation/native';
+import { useNavigation, useFocusEffect } from 'expo-router';
 import { useEffect, useLayoutEffect, useState, useCallback } from 'react';
 import ErrorModal from '@/components/ErrorModal';
 import { useDispatch, useSelector } from 'react-redux';

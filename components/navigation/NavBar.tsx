@@ -1,10 +1,10 @@
 import { View, TouchableOpacity } from 'react-native';
-import { useRoute } from '@react-navigation/native';
+import {  usePathname } from 'expo-router';
 import Text from '@/components/Text'
 import { Icon } from '../Icon';
 const NavBar = () => {
-  const route = useRoute();
-  const currentRoute = route.name;
+  const pathname = usePathname();
+  const currentRoute = pathname.split('/')[1] || 'Home';
 
   const navItems = [
     { name: 'Home', route: 'Home' },
@@ -12,7 +12,7 @@ const NavBar = () => {
     { name: 'About', route: 'About' },
     { name: 'Contact', route: 'Contact' },
   ];
-console.log("route",currentRoute)
+console.log("route",pathname)
   return (
     <View className="flex-row items-center justify-between px-5 py-4">
       <View className="mr-5">

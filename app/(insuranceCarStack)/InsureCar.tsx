@@ -1,6 +1,5 @@
 import Background from '@/components/Background';
 import { useTranslation } from 'react-i18next';
-import { useNavigation } from '@react-navigation/native';
 import { useDispatch } from 'react-redux';
 import { View } from 'react-native';
 import { Formik } from 'formik';
@@ -14,6 +13,7 @@ import { setQuoteUser } from '@/store/reducer/catalogsCarReducer';
 import { useSelector } from 'react-redux';
 import { RootState } from '@/store/store';
 import { formatUserDate } from '@/utils/datesUtils';
+import { useNavigation } from 'expo-router';
 //personal info car
 export default function InsureCarScreen() {
   const { t } = useTranslation();

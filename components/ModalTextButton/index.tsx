@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { ModalTextButtonProps } from './types';
 import { useEffect, useState } from 'react';
 import { TouchableOpacity, View } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from 'expo-router';
 import Modal from 'react-native-modal';
 import { Icon } from '../Icon';
 import Text from '@/components/Text';

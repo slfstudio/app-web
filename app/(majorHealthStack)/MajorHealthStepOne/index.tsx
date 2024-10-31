@@ -15,7 +15,6 @@ import {
 import { RootState } from '@/store/store';
 import { changeFormat } from '@/utils/datesUtils';
 import { majorHealthStepOneValidationSchema } from '@/utils/validationsSchema';
-import { useFocusEffect, useNavigation } from '@react-navigation/native';
 import { Formik } from 'formik';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -25,7 +24,7 @@ import { useDispatch, useSelector } from 'react-redux';
 export default function MajorHealthStepOne({ onStepChange }) {
   const preventReload = useRef(false);
   const [hasLoadedRates, setHasLoadedRates] = useState(true);
-  const navigation = useNavigation();
+ 
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const { countries, languageQuote, fetching, rates } = useSelector((state: RootState) => state.majorHealthReducer);
@@ -170,6 +169,7 @@ export default function MajorHealthStepOne({ onStepChange }) {
               {t('label.proposed_principal_insured')}
             </Text>
             <Spacing size="L" />
+            {/* Dylan */}
             <View className="flex-row flex-wrap gap-4">
               <View className="flex-1 min-w-[280px]">
                 <Input
