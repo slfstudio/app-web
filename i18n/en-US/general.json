@@ -53,7 +53,8 @@
     "coverage_500000_usd_Worldwide_coverage_up_to_your_sum_insured_limit_except_in_the_us":"Coverage 500,000 USD\n•Worldwide coverage up to your Sum Insured limit, except in the US.\n•Guaranteed lifetime renewal.\n•Deductible waiver in case of severe accidents.",
     "policy_fee_included_on_the_1st_modal_premium":"Policy Fee included on the 1st Modal Premium",
     "would_you_like_to_add_a_dental_policy_for":"Would you like to add a Dental policy for",
-    "if_you_delete_your_account":"If you delete your account, you will lose access to your policies."
+    "if_you_delete_your_account":"If you delete your account, you will lose access to your policies.",
+    "we_have_a_digital_platform_specialized_in_offering_medical_expenses":"We have a digital platform specialized in offering Medical Expenses, Property Damage, and Auto Insurance policies, specifically designed for expatriates who reside or are temporarily located in Mexico."
   },
   "headers": {
     "quote_your_insurance": "Quote your insurance",
@@ -100,6 +101,8 @@
     "cars":"Car Insurance",
     "health":"Health Insurance",
     "home":"Home Insurance",
-    "life":"Life Insurance"
+    "life":"Life Insurance",
+    "major_health_insurance_long_term":"Major Health Insurance Long-Term",
+    "travel_assist_health_insurance_short_term":"Travel Assist Health Insurance Short-term"
   }
 }
