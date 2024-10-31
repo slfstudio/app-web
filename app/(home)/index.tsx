@@ -32,7 +32,7 @@ export default function HomeScreen() {
                 <Image source={workingImg} className=' rounded-full absolute ' style={{width:300, height:400, right:120, top:-350}}/>
                 </View>
               </View>
-              <Button text='Hola' onPress={()=>navigate('(insuranceCarStack)')}/>
+              <Button text='Hola' onPress={()=>navigate('(travelAssistStack)')}/>
           </View>
           <View className='p-[20px]'>
             <Text variant='Heading-H5' className='text-dark' >Discover our benefits</Text>

@@ -48,6 +48,9 @@ export default function RootLayout() {
                 header: () => <Navbar />
               }} 
             />
+            <Stack.Screen name="(travelAssistStack)" options={{ 
+                header: () => <Navbar />
+              }} />
             <Stack.Screen name="(home)" options={{ 
                 header: () => <Navbar />
               }} />
