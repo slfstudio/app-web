@@ -142,21 +142,26 @@ export default function MajorHealthStepOne({ onStepChange }) {
               {t('text.the_effective_date_will_be_either_the_1st_or_the_15th')}
             </Text>
             <Spacing />
-            <Dropdown
-              data={countries}
-              label={t('label.country_of_residence')}
-              placeholder={t('placeholders.select')}
-              error={errors?.countryId}
-              onSelect={(value) => setFieldValue('countryId', value.value)}
-            />
-            <Spacing />
-            <Dropdown
-              data={languageQuote}
-              label={t('label.language_for_quote')}
-              placeholder={t('placeholders.select')}
-              onSelect={(value) => setFieldValue('languageId', value.value)}
-              error={errors?.languageId}
-            />
+            <View className="flex-row flex-wrap gap-4">
+              <View className="flex-1 min-w-[280px]">
+                <Dropdown
+                  data={countries}
+                  label={t('label.country_of_residence')}
+                  placeholder={t('placeholders.select')}
+                  error={errors?.countryId}
+                  onSelect={(value) => setFieldValue('countryId', value.value)}
+                />
+              </View>
+              <View className="flex-1 min-w-[280px]">
+                <Dropdown
+                  data={languageQuote}
+                  label={t('label.language_for_quote')}
+                  placeholder={t('placeholders.select')}
+                  onSelect={(value) => setFieldValue('languageId', value.value)}
+                  error={errors?.languageId}
+                />
+              </View>
+            </View>
 
             <Spacing size="L" />
             <View className="border border-pink-light" />
@@ -165,59 +170,68 @@ export default function MajorHealthStepOne({ onStepChange }) {
               {t('label.proposed_principal_insured')}
             </Text>
             <Spacing size="L" />
-            <Input
-              label={t('label.name')}
-              value={values.firstName}
-              error={errors.firstName}
-              onChangeText={handleChange?.('firstName')}
-            />
-            <Spacing />
-            <Input
-              label={t('label.last_name')}
-              value={values.lastName}
-              error={errors.lastName}
-              onChangeText={handleChange?.('lastName')}
-            />
-            <Spacing />
-            <Input
-              label={t('label.email')}
-              value={values.email}
-              error={errors.email}
-              onChangeText={handleChange?.('email')}
-            />
-            <Spacing />
-            <Input
-              label={t('label.birth_date')}
-              variant="date"
-              value={values.birthdate}
-              error={errors.birthdate}
-              placeholder={t('placeholders.mm_dd_yyyy')}
-              onChangeText={handleChange?.('birthdate')}
-            />
-            <Spacing />
+            <View className="flex-row flex-wrap gap-4">
+              <View className="flex-1 min-w-[280px]">
+                <Input
+                  label={t('label.name')}
+                  value={values.firstName}
+                  error={errors.firstName}
+                  onChangeText={handleChange?.('firstName')}
+                />
+              </View>
+              <View className="flex-1 min-w-[280px]">
+                <Input
+                  label={t('label.last_name')}
+                  value={values.lastName}
+                  error={errors.lastName}
+                  onChangeText={handleChange?.('lastName')}
+                />
+              </View>
+              <View className="flex-1 min-w-[280px]">
+                <Input
+                  label={t('label.email')}
+                  value={values.email}
+                  error={errors.email}
+                  onChangeText={handleChange?.('email')}
+                />
+              </View>
+              <View className="flex-1 min-w-[280px]">
+                <Input
+                  label={t('label.birth_date')}
+                  variant="date"
+                  value={values.birthdate}
+                  error={errors.birthdate}
+                  placeholder={t('placeholders.mm_dd_yyyy')}
+                  onChangeText={handleChange?.('birthdate')}
+                />
+              </View>
+              <View className="flex-1 min-w-[280px]">
+                <RadioButtonsActions
+                  options={[
+                    { id: 100, text: t('male'), value: 100 },
+                    { id: 101, text: t('female'), value: 101 },
+                    { id: 102, text: t('other'), value: 102 },
+                  ]}
+                  selectOption={(value: Object) => setFieldValue('genderId', value)}
+                  value={values.genderId}
+                  error={errors.genderId}
+                  label={t('label.sex_at_birth')}
+                />
+              </View>
+              <View className="flex-1 min-w-[280px]">
+                <RadioButtonsActions
+                  options={[
+                    { id: 1, text: t('yes'), value: true },
+                    { id: 2, text: t('no'), value: false },
+                  ]}
+                  selectOption={(value: Object) => setFieldValue('isSmoker', value)}
+                  value={values.isSmoker}
+                  error={errors.isSmoker}
+                  label={t('label.smoker')}
+                />
+              </View>
+            </View>
 
-            <RadioButtonsActions
-              options={[
-                { id: 100, text: t('male'), value: 100 },
-                { id: 101, text: t('female'), value: 101 },
-                { id: 102, text: t('other'), value: 102 },
-              ]}
-              selectOption={(value: Object) => setFieldValue('genderId', value)}
-              value={values.genderId}
-              error={errors.genderId}
-              label={t('label.sex_at_birth')}
-            />
-            <Spacing />
-            <RadioButtonsActions
-              options={[
-                { id: 1, text: t('yes'), value: true },
-                { id: 2, text: t('no'), value: false },
-              ]}
-              selectOption={(value: Object) => setFieldValue('isSmoker', value)}
-              value={values.isSmoker}
-              error={errors.isSmoker}
-              label={t('label.smoker')}
-            />
             <Spacing />
             <RadioButtonsActions
               options={[
@@ -261,27 +275,32 @@ export default function MajorHealthStepOne({ onStepChange }) {
                       error={errors.birthdate_spouse}
                     />
                     <Spacing />
-                    <RadioButtonsActions
-                      options={[
-                        { id: 1, text: t('male'), value: 1 },
-                        { id: 2, text: t('female'), value: 2 },
-                      ]}
-                      selectOption={(value: Object) => setFieldValue('genderId_spouse', value)}
-                      value={values.genderId_spouse}
-                      error={errors.genderId_spouse}
-                      label={t('label.sex_at_birth')}
-                    />
-                    <Spacing />
-                    <RadioButtonsActions
-                      options={[
-                        { id: 1, text: t('yes'), value: 1 },
-                        { id: 2, text: t('no'), value: 2 },
-                      ]}
-                      selectOption={(value: Object) => setFieldValue('isSmoker_spouse', value)}
-                      value={values.isSmoker_spouse}
-                      error={errors.isSmoker_spouse}
-                      label={t('label.smoker')}
-                    />
+                    <View className="flex-row flex-wrap gap-4">
+                      <View className="flex-1 min-w-[280px]">
+                        <RadioButtonsActions
+                          options={[
+                            { id: 1, text: t('male'), value: 1 },
+                            { id: 2, text: t('female'), value: 2 },
+                          ]}
+                          selectOption={(value: Object) => setFieldValue('genderId_spouse', value)}
+                          value={values.genderId_spouse}
+                          error={errors.genderId_spouse}
+                          label={t('label.sex_at_birth')}
+                        />
+                      </View>
+                      <View className="flex-1 min-w-[280px]">
+                        <RadioButtonsActions
+                          options={[
+                            { id: 1, text: t('yes'), value: 1 },
+                            { id: 2, text: t('no'), value: 2 },
+                          ]}
+                          selectOption={(value: Object) => setFieldValue('isSmoker_spouse', value)}
+                          value={values.isSmoker_spouse}
+                          error={errors.isSmoker_spouse}
+                          label={t('label.smoker')}
+                        />
+                      </View>
+                    </View>
                   </View>
                 )}
                 <Spacing />
