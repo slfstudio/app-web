@@ -51,6 +51,9 @@ export default function RootLayout() {
             <Stack.Screen name="(travelAssistStack)" options={{ 
                 header: () => <Navbar />
               }} />
+               <Stack.Screen name="(majorHealthStack)" options={{ 
+                header: () => <Navbar />
+              }} />
             <Stack.Screen name="(home)" options={{ 
                 header: () => <Navbar />
               }} />
