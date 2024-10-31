@@ -10,13 +10,13 @@ const InsuranceCarStack = () => {
     <Stack>
       <Stack.Screen
         name="index"
-        options={headerCustom({ primary: true, title: t('headers.quote_your_car_insurance') })}
+        options={{ headerShown: false }}
       />
       <Stack.Screen name="LoaderScreen" options={{ headerShown: false }} />
 
       <Stack.Screen
         name="YourQuoteScreen"
-        options={headerCustom({ primary: true, title: t('headers.your_quote') })}
+        options={{ headerShown: false }}
       />
     </Stack>
   );

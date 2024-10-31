@@ -1,4 +1,3 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -10,6 +9,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import '@/i18n';
 import '../global.css';
+import Navbar from '@/components/navigation/NavBar';
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
