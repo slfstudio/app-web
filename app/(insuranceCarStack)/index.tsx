@@ -14,10 +14,12 @@ import Spacing from '@/components/Spacing';
 import { Image } from 'expo-image';
 
 /**images */
-import street from '@/assets/images/quoteCar/jamie-street.png'
-import carWhite from '@/assets/images/quoteCar/carwhite.png'
-import carRed from '@/assets/images/quoteCar/carred.png'
-import carBlue from '@/assets/images/quoteCar/carblue.png'
+import street from '@/assets/images/quoteCar/jamie-street.png';
+import carWhite from '@/assets/images/quoteCar/carwhite.png';
+import carRed from '@/assets/images/quoteCar/carred.png';
+import carBlue from '@/assets/images/quoteCar/carblue.png';
+import SquareImages from '@/components/SquareImages';
+import Background from '@/components/Background';
 export default function CarSteps() {
   const { t } = useTranslation();
   const [currentStep, setCurrentStep] = useState(0);
@@ -40,7 +42,7 @@ export default function CarSteps() {
     }
   }, [currentStep, navigation]);
 
-  const imgArr = [carWhite]
+  const imgArr = [carWhite];
   // Set the goBack function in the navigation header
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -48,8 +50,11 @@ export default function CarSteps() {
     });
   }, [navigation, goBack]);
   return (
-    <View className='flex-1 flex-row'>
-      <View className="p-md flex-1 ">
+    <Background >
+      <View className="flex-1 flex-row">
+
+   
+      <View className="flex-1 p-md ">
         <Text variant="Heading-H6" className="text-dark">
           {t('headers.quote_your_car_insurance')}
         </Text>
@@ -58,17 +63,10 @@ export default function CarSteps() {
           <StepProgress steps={steps} currentStep={currentStep} onStepChange={changeStep} />
         </Paper>
       </View>
-      <View className='flex-1 p-10'>
-      {imgArr.map(item=> 
-      <Image
-            className="w-[10px] h-[10px] rounded-xl"
-            source={item}
-            contentFit="cover"
-            style={[StyleSheet.absoluteFill, { borderBottomRightRadius:  35  }]}
-
-          />)}
-        
+      <View className="flex-1 hidden md:flex">
+        <SquareImages image={street} imageThree={carWhite} imageTwo={carRed} imageFour={carBlue} />
       </View>
-    </View>
+      </View>
+    </Background>
   );
 }

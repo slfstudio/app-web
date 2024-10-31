@@ -42,8 +42,15 @@ export default function RootLayout() {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Stack>
-            <Stack.Screen name="(insuranceCarStack)" options={{ headerShown: false }} />
-            <Stack.Screen name="(home)" options={{ headerShown: false }} />
+            <Stack.Screen name="(insuranceCarStack)" 
+              
+              options={{ 
+                header: () => <Navbar />
+              }} 
+            />
+            <Stack.Screen name="(home)" options={{ 
+                header: () => <Navbar />
+              }} />
             <Stack.Screen name="+not-found" />
           </Stack>
         </PersistGate>
