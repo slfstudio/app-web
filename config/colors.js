@@ -39,7 +39,7 @@ module.exports = {
   'red-light5': '#FEF3F3',
   pink: '#F15093',
   'pink-dark': '#9A315D',
-  'pink-light': '#F796BE',
+  'pinkLight': '#F796BE',
   'pink-light2': '#FCDCE9',
   'pink-light3': '#FEEEF4',
   yellow: '#C9961A',
