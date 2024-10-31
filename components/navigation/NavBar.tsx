@@ -1,5 +1,5 @@
 import { View, TouchableOpacity } from 'react-native';
-import {  usePathname } from 'expo-router';
+import {  Link, usePathname } from 'expo-router';
 import Text from '@/components/Text'
 import { Icon } from '../Icon';
 const NavBar = () => {
@@ -7,10 +7,10 @@ const NavBar = () => {
   const currentRoute = pathname.split('/')[1] || 'Home';
 
   const navItems = [
-    { name: 'Home', route: 'Home' },
-    { name: 'Services', route: 'Services' },
-    { name: 'About', route: 'About' },
-    { name: 'Contact', route: 'Contact' },
+    { name: 'Home', route: '/' },
+    { name: 'Services', route: '/Services' },
+    { name: 'About', route: '/About' },
+    { name: 'Contact', route: '/Contact' },
   ];
 console.log("route",pathname)
   return (
@@ -21,14 +21,17 @@ console.log("route",pathname)
       
       <View className="flex-row gap-5">
         {navItems.map((item) => (
+         <Link href={item.route}>
+        
           <TouchableOpacity
             key={item.route}
             className={`py-1.5 px-2.5  ${
-              currentRoute === item.route ? 'border-b-2 border-primary' : '' 
+              currentRoute === item.name ? 'border-b-2 border-pinkLight' : '' 
             }`}
           >
             <Text className="text-base font-medium">{item.name}</Text>
           </TouchableOpacity>
+          </Link>
         ))}
       </View>
     </View>

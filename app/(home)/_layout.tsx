@@ -13,7 +13,9 @@ export default function HomeLayout() {
       <Stack.Screen
         name="home" options={{ headerShown: false }}
       />
-      
+        <Stack.Screen
+        name="Services" options={{ headerShown: false }}
+      />
     </Stack>
   );
 }
