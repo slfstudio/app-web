@@ -17,8 +17,9 @@ import ModalListCP from '@/components/ModalZp';
 import Loading from '@/components/Loading';
 import { RootState } from '@/store/store';
 import { useNavigation } from 'expo-router';
+import Text from '@/components/Text';
 
-export default function InsureHomeScreen({onStepChange}) {
+export default function InsureHomeScreen({ onStepChange }) {
   const { loggedIn } = useSelector((state: RootState) => state.userReducer);
   const dispatch = useDispatch();
   const { t } = useTranslation();
@@ -100,7 +101,7 @@ export default function InsureHomeScreen({onStepChange}) {
   const [isVisibleModal, setIsVisibleModal] = useState<boolean>(false);
   const handleSubmit = (values) => {
     dispatch(setQuoteHomeUser(values));
-    onStepChange()
+    onStepChange();
     //setIsVisibleModal(true)
     //setModalMessage({title:t('text.thank_you_for_your_trust'), text:t('text.we_will_contact_you_shortly_to_send')})
   };
@@ -131,6 +132,11 @@ export default function InsureHomeScreen({onStepChange}) {
 
   return (
     <Background className="px-md pt-md">
+      <Text>{t('label.step_1')}</Text>
+      <Text variant="Body-Medium-Bold" className="text-dark">
+        {t('label.general_information')}
+      </Text>
+      <Spacing />
       <View className="flex-1 pb-2xl justify-between">
         {/* form */}
         <Formik
@@ -141,116 +147,126 @@ export default function InsureHomeScreen({onStepChange}) {
           }}
         >
           {({ handleChange, handleBlur, handleSubmit, values, errors, setFieldValue, setValues }) => {
-           console.log("error===>",errors)
-           return (
+            console.log('error===>', errors);
+            return (
               <>
                 <View>
+                  <View className="flex-row flex-wrap gap-4">
+                    <View className="flex-1 min-w-[280px]">
+                      <Input
+                        variant="zipCode"
+                        label={t('label.zip_code')}
+                        value={values.postalCode}
+                        onChangeText={handleChange?.('postalCode')}
+                        error={errors.postalCode}
+                        keyboardType="numeric"
+                        returnKeyType="done"
+                        setZpArr={setZpArr}
+                        setLoadingZP={setLoadingZP}
+                        setVisibleModalCP={setVisibleModalCP}
+                      />
+                    </View>
+                    <View className="flex-1 min-w-[280px]">
+                      <Input
+                        label={t('label.state_province')}
+                        value={values.state_providence}
+                        onChangeText={handleChange?.('state_providence')}
+                        error={errors.state_providence}
+                        returnKeyType="done"
+                        editable={false}
+                      />
+                    </View>
+                    <View className="flex-1 min-w-[280px]">
+                      <Input
+                        editable={false}
+                        label={t('label.adress_line_1')}
+                        value={values.suburb}
+                        onChangeText={handleChange?.('suburb')}
+                        error={errors.suburb}
+                        returnKeyType="done"
+                      />
+                    </View>
+                    <View className="flex-1 min-w-[280px]">
+                      <Input
+                        label={t('label.city')}
+                        value={values.city}
+                        onChangeText={handleChange?.('city')}
+                        error={errors.city}
+                        returnKeyType="done"
+                        editable={false}
+                      />
+                    </View>
+                    <View className="flex-1 min-w-[280px]">
+                      <Dropdown
+                        placeholder={t('placeholders.select')}
+                        label={t('label.housing_status')}
+                        data={dataDropdown['housingStatus']}
+                        error={errors.housingStatus}
+                        onSelect={(value) => setFieldValue('housingStatus', value.value)}
+                      />
+                    </View>
+                    <View className="flex-1 min-w-[280px]">
+                      <Dropdown
+                        placeholder={t('placeholders.select')}
+                        label={t('label.content')}
+                        data={dataDropdown['content']}
+                        error={errors.content}
+                        onSelect={(value) => setFieldValue('content', value.value)}
+                        variant="info"
+                        onPressInfo={handleModalInfo}
+                      />
+                    </View>
+                    <View className="flex-1 min-w-[280px]">
+                      <Dropdown
+                        placeholder={t('placeholders.select')}
+                        label={t('label.liability')}
+                        data={dataDropdown['liability']}
+                        error={errors.liability}
+                        onSelect={(value) => setFieldValue('liability', value.value)}
+                      />
+                    </View>
+                    <View className="flex-1 min-w-[280px]">
+                      <Dropdown
+                        optionalText={t('optional')}
+                        placeholder={t('placeholders.select')}
+                        label={t('label.crystals')}
+                        data={dataDropdown['crystals']}
+                        error={errors.crystals}
+                        onSelect={(value) => setFieldValue('crystals', value.value)}
+                      />
+                    </View>
+                    <View className="flex-1 min-w-[280px]">
+                      <Dropdown
+                        optionalText={t('optional')}
+                        placeholder={t('placeholders.select')}
+                        label={t('label.jewerly')}
+                        data={dataDropdown['jewerly']}
+                        error={errors.jewerly}
+                        onSelect={(value) => setFieldValue('jewerly', value.value)}
+                      />
+                    </View>
+                    <View className="flex-1 min-w-[280px]">
+                      <Dropdown
+                        optionalText={t('optional')}
+                        placeholder={t('placeholders.select')}
+                        label={t('label.electronic_equipment')}
+                        data={dataDropdown['electronicEquipment']}
+                        error={errors.electronicEquipment}
+                        onSelect={(value) => setFieldValue('electronicEquipment', value.value)}
+                      />
+                    </View>
+                    <View className="flex-1 min-w-[280px]">
+                      <Dropdown
+                        optionalText={t('optional')}
+                        placeholder={t('placeholders.select')}
+                        label={t('label.robbery')}
+                        data={dataDropdown['robbery']}
+                        error={errors.robbery}
+                        onSelect={(value) => setFieldValue('robbery', value.value)}
+                      />
+                    </View>
+                  </View>
 
-                  <Spacing size="M" />
-                  <Input
-                    variant="zipCode"
-                    label={t('label.zip_code')}
-                    value={values.postalCode}
-                    onChangeText={handleChange?.('postalCode')}
-                    error={errors.postalCode}
-                    keyboardType="numeric"
-                    returnKeyType="done"
-                    setZpArr={setZpArr}
-                    setLoadingZP={setLoadingZP}
-                    setVisibleModalCP={setVisibleModalCP}
-                  />
-                  <Spacing size="M" />
-                  <Input
-                    label={t('label.state_province')}
-                    value={values.state_providence}
-                    onChangeText={handleChange?.('state_providence')}
-                    error={errors.state_providence}
-                    returnKeyType="done"
-                    editable={false}
-                  />
-                  <Spacing size="M" />
-                  <Input
-                    editable={false}
-                    label={t('label.adress_line_1')}
-                    value={values.suburb}
-                    onChangeText={handleChange?.('suburb')}
-                    error={errors.suburb}
-                    returnKeyType="done"
-                  />
-                  <Spacing size="M" />
-                  <Input
-                    label={t('label.city')}
-                    value={values.city}
-                    onChangeText={handleChange?.('city')}
-                    error={errors.city}
-                    returnKeyType="done"
-                    editable={false}
-                  />
-                  <Spacing size="M" />
-
-                  <Dropdown
-                    placeholder={t('placeholders.select')}
-                    label={t('label.housing_status')}
-                    data={dataDropdown['housingStatus']}
-                    error={errors.housingStatus}
-                    onSelect={(value) => setFieldValue('housingStatus', value.value)}
-                  />
-                  <Spacing size="M" />
-
-                  <Dropdown
-                    placeholder={t('placeholders.select')}
-                    label={t('label.content')}
-                    data={dataDropdown['content']}
-                    error={errors.content}
-                    onSelect={(value) => setFieldValue('content', value.value)}
-                    variant="info"
-                    onPressInfo={handleModalInfo}
-                  />
-
-                  <Spacing size="M" />
-                  <Dropdown
-                    placeholder={t('placeholders.select')}
-                    label={t('label.liability')}
-                    data={dataDropdown['liability']}
-                    error={errors.liability}
-                    onSelect={(value) => setFieldValue('liability', value.value)}
-                  />
-                  <Spacing size="M" />
-                  <Dropdown
-                    optionalText={t('optional')}
-                    placeholder={t('placeholders.select')}
-                    label={t('label.crystals')}
-                    data={dataDropdown['crystals']}
-                    error={errors.crystals}
-                    onSelect={(value) => setFieldValue('crystals', value.value)}
-                  />
-                  <Spacing size="M" />
-                  <Dropdown
-                    optionalText={t('optional')}
-                    placeholder={t('placeholders.select')}
-                    label={t('label.jewerly')}
-                    data={dataDropdown['jewerly']}
-                    error={errors.jewerly}
-                    onSelect={(value) => setFieldValue('jewerly', value.value)}
-                  />
-                  <Spacing size="M" />
-                  <Dropdown
-                    optionalText={t('optional')}
-                    placeholder={t('placeholders.select')}
-                    label={t('label.electronic_equipment')}
-                    data={dataDropdown['electronicEquipment']}
-                    error={errors.electronicEquipment}
-                    onSelect={(value) => setFieldValue('electronicEquipment', value.value)}
-                  />
-                  <Spacing size="M" />
-                  <Dropdown
-                    optionalText={t('optional')}
-                    placeholder={t('placeholders.select')}
-                    label={t('label.robbery')}
-                    data={dataDropdown['robbery']}
-                    error={errors.robbery}
-                    onSelect={(value) => setFieldValue('robbery', value.value)}
-                  />
                   <Spacing size="M" />
                   <RadioButtonsActions
                     optionalText={t('optional')}

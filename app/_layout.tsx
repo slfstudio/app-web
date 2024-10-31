@@ -39,27 +39,37 @@ export default function RootLayout() {
   }
 
   return (
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-          <Stack>
-            <Stack.Screen name="(insuranceCarStack)" 
-              
-              options={{ 
-                header: () => <Navbar />
-              }} 
-            />
-            <Stack.Screen name="(travelAssistStack)" options={{ 
-                header: () => <Navbar />
-              }} />
-               <Stack.Screen name="(majorHealthStack)" options={{ 
-                header: () => <Navbar />
-              }} />
-            <Stack.Screen name="(home)" options={{ 
-                header: () => <Navbar />
-              }} />
-            <Stack.Screen name="+not-found" />
-          </Stack>
-        </PersistGate>
-      </Provider>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <Stack>
+          <Stack.Screen
+            name="(insuranceCarStack)"
+            options={{
+              header: () => <Navbar />,
+            }}
+          />
+          <Stack.Screen
+            name="(travelAssistStack)"
+            options={{
+              header: () => <Navbar />,
+            }}
+          />
+          <Stack.Screen
+            name="(majorHealthStack)"
+            options={{
+              header: () => <Navbar />,
+            }}
+          />
+          <Stack.Screen name="(insuranceHomeStack)" options={{ header: () => <Navbar /> }} />
+          <Stack.Screen
+            name="(home)"
+            options={{
+              header: () => <Navbar />,
+            }}
+          />
+          <Stack.Screen name="+not-found" />
+        </Stack>
+      </PersistGate>
+    </Provider>
   );
 }

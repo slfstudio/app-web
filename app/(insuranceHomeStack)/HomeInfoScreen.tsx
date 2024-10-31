@@ -14,6 +14,7 @@ import Loading from '@/components/Loading';
 import { RootState } from '@/store/store';
 import Dropdown from '@/components/Dropdown';
 import { useNavigation } from 'expo-router';
+import Text from '@/components/Text';
 
 export default function HomeInfoScreen() {
   const dispatch = useDispatch();
@@ -73,6 +74,12 @@ export default function HomeInfoScreen() {
   return (
     <Background className="px-md pt-md">
       <View className="flex-1 pb-2xl justify-between">
+        <Text>{t('label.step_2')}</Text>
+        <Text variant="Body-Medium-Bold" className="text-dark">
+          {t('label.general_information')}
+        </Text>
+        <Spacing />
+
         {/* form */}
         <Formik
           validationSchema={homeInfoValidationSchema}

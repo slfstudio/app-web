@@ -17,7 +17,7 @@ import Spacing from '@/components/Spacing';
 import Button from '@/components/Button';
 import Dropdown from '@/components/Dropdown';
 import { useNavigation } from 'expo-router';
-
+import Text from '@/components/Text';
 
 export default function QuoteCarScreen() {
   const { t } = useTranslation();
@@ -89,6 +89,12 @@ export default function QuoteCarScreen() {
   return (
     <Background className="px-md pt-md">
       <View className="flex-1 pb-2xl justify-between">
+        <Text>{t('label.step_1')}</Text>
+        {/* Dylan cambiar nombre de form */}
+        <Text variant="Body-Medium-Bold" className="text-dark">
+          {t('label.general_information')}
+        </Text>
+        <Spacing />
         {/* form */}
         <Formik
           validationSchema={quoteCarFormValidationSchema}
@@ -150,7 +156,7 @@ export default function QuoteCarScreen() {
                   />
                 </View>
               </View>
-              <Spacing  />
+              <Spacing />
               <Dropdown
                 variant="info"
                 placeholder={t('placeholders.select')}

@@ -52,7 +52,7 @@ export default function InsuranceHomeSteps() {
       <View className="flex-1 flex-row">
         <View className="flex-1 p-md ">
           <Text variant="Heading-H6" className="text-dark">
-            {t('headers.travel_assist')}
+            {t('headers.quote_your_homes_insurance')}
           </Text>
           <Spacing />
           <Paper>
