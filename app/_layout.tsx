@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import { persistor, store } from '@/store/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import '@/i18n';
 import '../global.css';
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -38,15 +39,14 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Stack>
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen name="(insuranceCarStack)" options={{ headerShown: false }} />
             <Stack.Screen name="+not-found" />
           </Stack>
         </PersistGate>
       </Provider>
-    </ThemeProvider>
   );
 }

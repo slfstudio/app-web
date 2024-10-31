@@ -5,8 +5,13 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import Text from '@/components/Text';
-
+import Button from '@/components/Button'
+import { useNavigation } from 'expo-router';
 export default function HomeScreen() {
+
+  const {navigate} = useNavigation();
+
+  console.log("perro===>",navigate)
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -21,6 +26,9 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <Text  variant='Body-Large-Medium' className='' >Dylan</Text>
+      <Button onPress={()=>{
+     navigate("(insuranceCarStack)")
+      }}/>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>

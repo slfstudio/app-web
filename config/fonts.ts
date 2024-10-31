@@ -1,13 +1,13 @@
-import InterBlack from '@fonts/Inter/Inter-Black.ttf';
-import InterBold from '@fonts/Inter/Inter-Bold.ttf';
-import InterExtraBold from '@fonts/Inter/Inter-ExtraBold.ttf';
-import InterExtraLight from '@fonts/Inter/Inter-ExtraLight.ttf';
-import InterLight from '@fonts/Inter/Inter-Light.ttf';
-import InterMedium from '@fonts/Inter/Inter-Medium.ttf';
-import InterRegular from '@fonts/Inter/Inter-Regular.ttf';
-import InterSemiBold from '@fonts/Inter/Inter-SemiBold.ttf';
-import InterThin from '@fonts/Inter/Inter-Thin.ttf';
-import SpaceMono from '@fonts/SpaceMono-Regular.ttf';
+import InterBlack from '@/assets/fonts/Inter/Inter-Black.ttf';
+import InterBold from '@/assets/fonts/Inter/Inter-Bold.ttf';
+import InterExtraBold from '@/assets/fonts/Inter/Inter-ExtraBold.ttf';
+import InterExtraLight from '@/assets/fonts/Inter/Inter-ExtraLight.ttf';
+import InterLight from '@/assets/fonts/Inter/Inter-Light.ttf';
+import InterMedium from '@/assets/fonts/Inter/Inter-Medium.ttf';
+import InterRegular from '@/assets/fonts/Inter/Inter-Regular.ttf';
+import InterSemiBold from '@/assets/fonts/Inter/Inter-SemiBold.ttf';
+import InterThin from '@/assets/fonts/Inter/Inter-Thin.ttf';
+import SpaceMono from '@/assets/fonts/SpaceMono-Regular.ttf';
 const fontsLoad = {
   'inter-black': InterBlack,
   'inter-bold': InterBold,
