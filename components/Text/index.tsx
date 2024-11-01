@@ -10,7 +10,7 @@ interface CustomTextProps {
 type Props = TextProps & CustomTextProps;
 
 const Text: React.FC<Props> = (props) => {
-  return <RNText className={`text-primary-text ${props.className}`} style={[typography[props?.variant ?? 'default']]}  {...props} />;
+  return <RNText {...props}  style={[typography[props?.variant ?? 'default']]} className={`text-primary-text ${props.className}`}   />;
 };
 
 export default Text;

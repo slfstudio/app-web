@@ -18,14 +18,27 @@ export default function HomeScreen() {
     <Background className="bg-white">
       <View className="flex-1">
         <View className="flex-row h-[50%]">
-          <View className="flex-1 items-center  justify-center p-[20px]">
-            <Text variant="Heading-H6" className="text-dark">
-              {t('regards.good_morning')}
-            </Text>
-            <Spacing />
-            <Text>{t('text.secure_your_peace_of_mind_with_a_quick')}</Text>
-            <Spacing />
-            <Button text={t('headers.quote_your_insurance')} onPress={() => navigate('(insuranceHomeStack)')} />
+          <View className="flex-1  justify-center p-20  items-center">
+            <View className="items-center">
+              <Text variant="Heading-H1" className="text-dark">
+                {t('regards.good_morning')}
+              </Text>
+            </View>
+            <View className="w-[380px] justify-center">
+              <View className="items-center">
+                <Spacing />
+                <Text className="text-center">{t('text.secure_your_peace_of_mind_with_a_quick')}</Text>
+                <Spacing />
+              </View>
+
+              <Button
+                variant="image"
+                text={t('headers.quote_your_insurance')}
+                onPress={() => navigate('Services', { screen: 'insuranceHomeStack' })}
+              />
+              <Spacing />
+              <Button variant="border" text={t('headers.log_in')} onPress={() => null} />
+            </View>
           </View>
           <View className="flex-1 ">
             <CircleImages image={beachImg} imagetwo={churchImg} imagethree={workingImg} />
