@@ -64,7 +64,7 @@ export default function RootLayout() {
           <Stack.Screen
             name="(home)"
             options={{
-              header: () => <Navbar />,
+              header: () => <Navbar isWhite/>,
             }}
           />
           <Stack.Screen name="+not-found" />

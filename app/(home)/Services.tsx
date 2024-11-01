@@ -57,7 +57,7 @@ export default function Services() {
   ];
 
   return (
-    <Background>
+    <Background className='bg-white'>
     <View className="flex-1 px-14">
       <Text variant="Heading-H6" className="text-pinkLight">
         {t('headers.insurance_services')}

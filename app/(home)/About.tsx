@@ -13,7 +13,7 @@ export default function About() {
   const isMobile = width < 768; // Common breakpoint for mobile devices
 
   return (
-    <Background>
+    <Background className="bg-white">
       <View className="p-[16px]">
         <Text variant="Heading-H6" className="text-pinkLight">
           {t('headers.insurance_services')}

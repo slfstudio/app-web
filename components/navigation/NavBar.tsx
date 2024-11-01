@@ -2,7 +2,7 @@ import { View, TouchableOpacity } from 'react-native';
 import { Link, usePathname } from 'expo-router';
 import Text from '@/components/Text';
 import { Icon } from '../Icon';
-const NavBar = () => {
+const NavBar = ({isWhite}) => {
   const pathname = usePathname();
   const currentRoute = pathname.split('/')[1] || 'Home';
 
@@ -14,7 +14,7 @@ const NavBar = () => {
   ];
 
   return (
-    <View className="flex-row items-center justify-between px-5 py-4">
+    <View className={`flex-row items-center justify-between px-5 py-4 ${isWhite && 'bg-white'}`}>
       <Link href="/">
         <View className="mr-5">
           <Icon name="ExpatWeb" size={30} />
