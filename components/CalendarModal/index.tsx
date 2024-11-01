@@ -59,6 +59,25 @@ const CalendarModal: React.FC<CalendarModalProps> = ({ fromDate, onSelectDate, i
 
     return markedDates;
   };
+
+  const isCurrentMonthMinMonth = () => {
+    const currentMonth = new Date(minDateDisplay).getMonth();
+    const currentYear = new Date(minDateDisplay).getFullYear();
+    const minMonth = minDate.getMonth();
+    const minYear = minDate.getFullYear();
+    
+    return currentMonth === minMonth && currentYear === minYear;
+  };
+
+  const getInitialMonth = () => {
+    const today = new Date();
+    if (today.getDate() > 15) {
+      const nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+      return utcDateToShortDisplay(nextMonth);
+    }
+    return minDateDisplay;
+  };
+
   const contents = (
     <View className="flex-1 justify-end">
       <View className="bg-white p-4">
@@ -94,12 +113,13 @@ const CalendarModal: React.FC<CalendarModalProps> = ({ fromDate, onSelectDate, i
       </View>
 
       <ExtCalendar
-        current={minDateDisplay}
+        current={getInitialMonth()}
         minDate={minDateDisplay}
         maxDate={maxDateDisplay}
         onDayPress={(day) => didSelectDay(day)}
         monthFormat="MMMM yyyy"
         hideExtraDays
+        disableArrowLeft={isCurrentMonthMinMonth()}
         onPressArrowLeft={(substractMonth) => substractMonth()}
         onPressArrowRight={(addMonth) => addMonth()}
         className="shadow-md"
