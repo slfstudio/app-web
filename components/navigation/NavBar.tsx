@@ -12,9 +12,9 @@ const NavBar = ({isWhite}) => {
     { name: 'About', route: '/About' },
     { name: 'Contact', route: '/Contact' },
   ];
-
+  console.log("currentRoute",pathname.split('/').length)
   return (
-    <View className={`flex-row items-center justify-between px-5 py-4 ${isWhite && 'bg-white'}`}>
+    <View className={`flex-row items-center justify-between px-5 py-4 ${isWhite && pathname.split('/').length <= 2 && 'bg-white'}`}>
       <Link href="/">
         <View className="mr-5">
           <Icon name="ExpatWeb" size={30} />
