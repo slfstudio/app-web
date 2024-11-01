@@ -19,7 +19,9 @@ export default function HomeLayout() {
       <Stack.Screen
         name="About" options={{ headerShown: false }}
       />
-      
+      <Stack.Screen
+        name="Contact" options={{ headerShown: false }}
+      />
     </Stack>
   );
 }

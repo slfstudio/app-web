@@ -105,5 +105,8 @@
     "life":"Life Insurance",
     "major_health_insurance_long_term":"Major Health Insurance Long-Term",
     "travel_assist_health_insurance_short_term":"Travel Assist Health Insurance Short-term"
+  },
+  "info":{
+    "more_than_10_million_clients_worldwide":"•More than 10 million clients worldwide.\n•Global network with representation in most cities around the world.\n•Over 2 million providers worldwide: Ground ambulances, Air ambulances, Primary Care Centers, Diagnostic Centers, Hospitals, Medical Centers, Rehabilitation Centers, Laboratories, among many other medical facilities."
   }
 }
