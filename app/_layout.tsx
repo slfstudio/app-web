@@ -10,6 +10,7 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 import '@/i18n';
 import '../global.css';
 import Navbar from '@/components/navigation/NavBar';
+import Footer from '@/components/navigation/Footer';
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
@@ -42,33 +43,25 @@ export default function RootLayout() {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <Stack>
+
           <Stack.Screen
-            name="(insuranceCarStack)"
+            name="index"
             options={{
-              header: () => <Navbar />,
+              header: () => <Navbar isWhite />,
             }}
           />
-          <Stack.Screen
-            name="(travelAssistStack)"
-            options={{
-              header: () => <Navbar />,
-            }}
-          />
-          <Stack.Screen
-            name="(majorHealthStack)"
-            options={{
-              header: () => <Navbar />,
-            }}
-          />
-          <Stack.Screen name="(insuranceHomeStack)" options={{ header: () => <Navbar /> }} />
-          <Stack.Screen
-            name="(home)"
-            options={{
-              header: () => <Navbar />,
-            }}
-          />
+          <Stack.Screen name="Services"  options={{
+              header: () => <Navbar isWhite />,
+            }}/>
+          <Stack.Screen name="About"  options={{
+              header: () => <Navbar isWhite />,
+            }} />
+          <Stack.Screen name="Contact"  options={{
+              header: () => <Navbar isWhite />,
+            }} />
           <Stack.Screen name="+not-found" />
         </Stack>
+        <Footer/>
       </PersistGate>
     </Provider>
   );
