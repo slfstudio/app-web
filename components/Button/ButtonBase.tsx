@@ -28,7 +28,7 @@ function ButtonBase({ variant, text, onPress, ...props }: ButtonCustomProps) {
     <TouchableOpacity
       disabled={props.disabled}
       onPress={onPress}
-      className={`${containerStyle[variant ?? 'primary']} h-14 rounded-full items-center justify-center `}
+      className={`${containerStyle[variant ?? 'primary']} h-14px rounded-full items-center justify-center `}
     >
       <Text className={getClassName(variant ?? 'default')} variant="Body-Medium-Medium">
         {text}
