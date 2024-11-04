@@ -107,6 +107,26 @@
     "travel_assist_health_insurance_short_term":"Travel Assist Health Insurance Short-term"
   },
   "info":{
-    "more_than_10_million_clients_worldwide":"•More than 10 million clients worldwide.\n•Global network with representation in most cities around the world.\n•Over 2 million providers worldwide: Ground ambulances, Air ambulances, Primary Care Centers, Diagnostic Centers, Hospitals, Medical Centers, Rehabilitation Centers, Laboratories, among many other medical facilities."
+    "more_than_10_million_clients_worldwide":"•More than 10 million clients worldwide.\n•Global network with representation in most cities around the world.\n•Over 2 million providers worldwide: Ground ambulances, Air ambulances, Primary Care Centers, Diagnostic Centers, Hospitals, Medical Centers, Rehabilitation Centers, Laboratories, among many other medical facilities.",
+    "terms_and_conditions":"Terms and Conditions",
+    "privacy_policy":"Privacy Policy",
+    "search":"Search",
+    "for_what_purposes_will_we_use_your_personal_data":"For what purposes will we use your personal data?",
+    "what_personal_data_will_we_use_for_these_purposes":"What personal data will we use for these purposes?",
+    "with_whom_do_we_share_your_personal_information_and_for_what_purposes":"With whom do we share your personal information, and for what purposes?",
+    "how_can_you_access_rectify_or_cancel_your_personal_data_or_object_to_its_use":"How can you access, rectify, or cancel your personal data, or object to its use?",
+    "mechanisms_for_exercising_arco_rights_and_revocation_of_consent":"Mechanisms for exercising ARCO rights and revocation of consent",
+    "how_can_you_limit_the_use_or_disclosure_of_your_personal_information":"How can you limit the use or disclosure of your personal information?",
+    "use_of_tracking_technologies_on_our_website":"Use of tracking technologies on our website",
+    "how_can_you_learn_about_changes_to_this_privacy_notice":"How can you learn about changes to this privacy notice?",
+    "your_consent_for_the_processing_of_your_personal_data":"Your consent for the processing of your personal data.",
+    "data_deletion_policies":"Data Deletion Policies",
+    "purpose":"Purpose",
+    "rights":"Rights",
+    "when_does_the_right_to_erasure_apply":"When Does the Right to Erasure Apply?",
+    "how_can_data_be_deleted":"How Can Data Be Deleted?",
+    "who_do_we_share_your_personal_information_with_and_for_what_purposes":"Who Do We Share Your Personal Information With, and for What Purposes?",
+    "how_can_you_access_rectify_or_cancel_your_personal_data_or_oppose_its_use":"How Can You Access, Rectify, or Cancel Your Personal Data or Oppose Its Use?",
+    "mechanisms_for_exercising_arco_rights_and_consent_revocation":"Mechanisms for Exercising ARCO Rights and Consent Revocation"
   }
 }

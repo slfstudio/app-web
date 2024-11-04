@@ -31,7 +31,7 @@ export default function AboutSection({
           </Text>
         </View>
         <Spacing />
-        <Text variant="Body-Medium-Medium" className="text-pinkLight">
+        <Text variant="Body-Medium-Medium" className="text-pink-light">
          {title}
         </Text>
         <Spacing />
@@ -41,7 +41,7 @@ export default function AboutSection({
             <Text variant='Body-Medium-Regular'className='text-dark' >{bullet} </Text>
             <Spacing/>
             {variant == 'car'&& <>
-                <Text variant='Body-Medium-Medium' className='text-pinkLight'>{titleTwo} </Text>
+                <Text variant='Body-Medium-Medium' className='text-pink-light'>{titleTwo} </Text>
                 <Spacing/>
                 <Text variant='Body-Medium-SemiBold' className='text-dark'>{subtitletwo} </Text>
                 <Spacing/>
@@ -51,7 +51,7 @@ export default function AboutSection({
         {variant == 'health'&& 
         <>
         
-                <View className='border border-pinkLight rounded-[16px] items-center w-[80%] p-[16px]'>
+                <View className='border border-pink-light rounded-[16px] items-center w-[80%] p-[16px]'>
             <Text variant='Body-Medium-Regular'>Rated B++ by AM BEST.</Text>
         </View>
         </>

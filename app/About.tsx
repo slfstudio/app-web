@@ -15,7 +15,7 @@ export default function About() {
   return (
     <Background className="bg-white">
       <View className="p-[16px]">
-        <Text variant="Heading-H6" className="text-pinkLight">
+        <Text variant="Heading-H6" className="text-pink-light">
           {t('headers.insurance_services')}
         </Text>
         <View className="w-full h-[2px] bg-stroke my-md" />
@@ -44,7 +44,7 @@ export default function About() {
         </View>
         <Spacing />
         <View className="flex-row p-[16px]">
-          <TextRN className="font-['Inter'] text-[79px] font-bold leading-[146.954px] tracking-[2px] text-pinkLight">
+          <TextRN className="font-['Inter'] text-[79px] font-bold leading-[146.954px] tracking-[2px] text-pink-light">
             24/7
           </TextRN>
           <Spacing horizontal />

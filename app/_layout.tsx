@@ -43,25 +43,39 @@ export default function RootLayout() {
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <Stack>
-
           <Stack.Screen
             name="index"
             options={{
               header: () => <Navbar isWhite />,
             }}
           />
-          <Stack.Screen name="Services"  options={{
+          <Stack.Screen
+            name="Services"
+            options={{
               header: () => <Navbar isWhite />,
-            }}/>
-          <Stack.Screen name="About"  options={{
+            }}
+          />
+          <Stack.Screen
+            name="About"
+            options={{
               header: () => <Navbar isWhite />,
-            }} />
-          <Stack.Screen name="Contact"  options={{
+            }}
+          />
+          <Stack.Screen
+            name="Contact"
+            options={{
               header: () => <Navbar isWhite />,
-            }} />
+            }}
+          />
+          <Stack.Screen
+            name="terms"
+            options={{
+              header: () => <Navbar isWhite />,
+            }}
+          />
           <Stack.Screen name="+not-found" />
         </Stack>
-        <Footer/>
+        <Footer />
       </PersistGate>
     </Provider>
   );
