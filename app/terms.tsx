@@ -76,7 +76,7 @@ export default function Terms() {
   return (
     <Background>
       <View className="flex1 p-[60px]">
-        <Text variant="Body-Medium-SemiBold" className="text-pink-light">
+        <Text variant="Body-Medium-SemiBold" className="text-pink-light" >
           {t('info.terms_and_conditions')}
         </Text>
         <Spacing />
