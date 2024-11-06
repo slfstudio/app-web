@@ -14,7 +14,7 @@ export default function Contact() {
   return (
     <Background className="bg-white">
       <View className="flex-1 p-[3%]">
-        <Text variant="Heading-H6" className="text-pinkLight">
+        <Text variant="Heading-H6" className="text-pink-light">
           Get in touch
         </Text>
         <View className="w-full h-[2px] bg-stroke my-md" />

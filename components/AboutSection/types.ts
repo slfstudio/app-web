@@ -8,14 +8,14 @@ export enum aboutSectionVariant{
 export interface AboutSectionProps{
     variant?: keyof  typeof aboutSectionVariant;
     iconName?:keyof IconsType;
-    mainTitle:string;
-    title:string;
-    titleTwo?:string;
-    subtitle:string;
-    subtitletwo?:string;
-    bullet:string;
-    bulletTwo?:string;
-    bulletThree?:string;
-    bulletFour?:string;
+    mainTitle:string | any;
+    title:string | any;
+    titleTwo?:string | any;
+    subtitle:string | any;
+    subtitletwo?:string | any;
+    bullet:string | any;
+    bulletTwo?:string | any;
+    bulletThree?:string | any;
+    bulletFour?:string | any;
 
 }

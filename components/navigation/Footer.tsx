@@ -17,7 +17,7 @@ const Footer = () => {
         <Text className="text-white text-base">Terms and Conditions</Text>
       </Link>
       <Spacing horizontal/>
-      <Link href="/policy">
+      <Link href="/terms">
         <Text className="text-white text-base">Privacy Policy</Text>
       </Link>
     </View>

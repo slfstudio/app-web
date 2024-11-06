@@ -25,7 +25,7 @@ const NavBar = ({isWhite}) => {
           <Link href={item.route as `/${string}`}>
             <TouchableOpacity
               key={item.route}
-              className={`py-1.5 px-2.5  ${currentRoute === item.name ? 'border-b-2 border-pinkLight' : ''}`}
+              className={`py-1.5 px-2.5  ${currentRoute === item.name ? 'border-b-2 border-pink-light' : ''}`}
             >
               <Text className="text-base font-medium">{item.name}</Text>
             </TouchableOpacity>

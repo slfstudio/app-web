@@ -1,5 +1,6 @@
 import { ImageBackground, TouchableOpacity, View } from 'react-native';
 import Text from '@/components/Text';
+import Bullets from '../Bullets';
 
 interface Insurance {
   image: any; // Update this to more specific type if possible
@@ -29,12 +30,7 @@ function CardWebServices({ insurance }: CardWebServicesProps) {
       </ImageBackground>
       <View className="mt-4">
         {insurance.descriptiopn.map((item, index) => (
-          <View key={index} className="flex-row items-start mb-2">
-            <Text variant="Body-Extra-Small-Regular" className="mr-2">
-              •
-            </Text>
-            <Text variant="Body-Extra-Small-Regular">{item}</Text>
-          </View>
+          <Bullets key={index} label={item}/>
         ))}
       </View>
     </TouchableOpacity>
