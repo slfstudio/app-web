@@ -54,7 +54,9 @@
     "policy_fee_included_on_the_1st_modal_premium":"Policy Fee included on the 1st Modal Premium",
     "would_you_like_to_add_a_dental_policy_for":"Would you like to add a Dental policy for",
     "if_you_delete_your_account":"If you delete your account, you will lose access to your policies.",
-    "we_have_a_digital_platform_specialized_in_offering_medical_expenses":"We have a digital platform specialized in offering Medical Expenses, Property Damage, and Auto Insurance policies, specifically designed for expatriates who reside or are temporarily located in Mexico."
+    "we_have_a_digital_platform_specialized_in_offering_medical_expenses":"We have a digital platform specialized in offering Medical Expenses, Property Damage, and Auto Insurance policies, specifically designed for expatriates who reside or are temporarily located in Mexico.",
+     "were_working_on_it":"We're working on it, and it'll be ready in just a moment.",
+    "your_quote_is_on_its_way":"Your quote is on its way!"
   },
   "headers": {
     "quote_your_insurance": "Quote your insurance",

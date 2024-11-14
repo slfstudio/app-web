@@ -113,12 +113,6 @@ export const fetchQuoteHomeSend = createAsyncThunk(
       const { pushToken, quoteHomeUser } = catalogsGenericReducer;
 
       const {
-        //Eliminar
-        // lastName,//Eliminar
-        // secondLastName,//Eliminar
-
-        phone,
-        phone_code,
         postalCode,
         housingStatus,
         suburb,
@@ -131,9 +125,9 @@ export const fetchQuoteHomeSend = createAsyncThunk(
         rubble = 0,
       } = quoteHomeUser;
 
-      const { alias, email, name } = values;
+      const { phone, phone_code, email, name } = values;
       const params = {
-        params: `alias=${alias}&name=${name}&e_mail=${email}&cus_lada=${phone_code}&phone=${phone}&zip_code=${postalCode}&colony=${suburb}&delegation=${city}&state=${state_providence}&id_esquema=${housingStatus === 'Owner' ? 'Propietario' : 'Inquilino'}&suma_asegurada=null&valor_vivienda=null&contenido=${content}&responsabilidad_civil=${liability}&cristales=${crystals}&remocion_escombros=${rubble}&push_token=${pushToken}&APP_ID=${getQueryStringIdPlatform()}`,
+        params: `name=${name}&e_mail=${email}&cus_lada=${phone_code}&phone=${phone}&zip_code=${postalCode}&colony=${suburb}&delegation=${city}&state=${state_providence}&id_esquema=${housingStatus === 'Owner' ? 'Propietario' : 'Inquilino'}&suma_asegurada=null&valor_vivienda=null&contenido=${content}&responsabilidad_civil=${liability}&cristales=${crystals}&remocion_escombros=${rubble}&push_token=${pushToken}&APP_ID=${getQueryStringIdPlatform()}`,
       };
       const response = await quoteHome(params);
       if (response.data.status !== 'success') {

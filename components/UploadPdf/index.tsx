@@ -273,7 +273,7 @@ export default function UploadPdf(text = 'upload pdf...') {
   }, []);
 
   if (loading) {
-    return <Loading />;
+    return <Loading withText={false} />;
   }
 
   return (

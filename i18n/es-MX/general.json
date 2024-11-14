@@ -54,8 +54,9 @@
     "policy_fee_included_on_the_1st_modal_premium":"Tarifa de poliza incluida en primera opción de premium.",
     "would_you_like_to_add_a_dental_policy_for":"¿Le gustaría agregar una póliza dental por",
     "if_you_delete_your_account":"Si eliminas tu cuenta, perderás el acceso a tus pólizas.",
-    "we_have_a_digital_platform_specialized_in_offering_medical_expenses":"Contamos con una plataforma digital especializada en ofrecer pólizas de Gastos Médicos, Daños a la Propiedad y Seguros de Auto, diseñadas específicamente para expatriados que residen o se encuentran temporalmente en México."
-
+    "we_have_a_digital_platform_specialized_in_offering_medical_expenses":"Contamos con una plataforma digital especializada en ofrecer pólizas de Gastos Médicos, Daños a la Propiedad y Seguros de Auto, diseñadas específicamente para expatriados que residen o se encuentran temporalmente en México.",
+    "were_working_on_it":"Estamos trabajando en ello, y estará listo en solo un momento.",
+    "your_quote_is_on_its_way":"¡Tu cotización está en camino!"
   },
   "headers": {
     "quote_your_insurance": "Cotiza tu seguro",

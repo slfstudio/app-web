@@ -41,7 +41,7 @@ const LoaderScreen: React.FC = () => {
   return (
     <View className="flex-1 h-full w-full items-center justify-center">
       <ErrorModal isVisible={error} text={t('warnings.somethings_missing')} onClose={handleClose} />
-      <Loading />
+      <Loading isQuote />
     </View>
   );
 };
