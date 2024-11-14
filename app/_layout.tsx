@@ -49,6 +49,12 @@ export default function RootLayout() {
               header: () => <Navbar isWhite />,
             }}
           />
+           <Stack.Screen
+            name="Auth"
+            options={{
+              header: () => <Navbar isWhite />,
+            }}
+          />
           <Stack.Screen
             name="Services"
             options={{

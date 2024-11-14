@@ -37,7 +37,7 @@ export default function HomeScreen() {
                 onPress={() => navigate('Services', { screen: 'insuranceHomeStack' })}
               />
               <Spacing />
-              <Button variant="border" text={t('headers.log_in')} onPress={() => null} />
+              <Button variant="border" text={t('headers.log_in')} onPress={() => navigate('Auth')} />
             </View>
           </View>
           <View className="flex-1 ">
