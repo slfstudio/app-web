@@ -1,0 +1,11 @@
+export { default as Coins } from './Coins';
+export { default as File } from './File';
+export { default as Folder } from './Folder';
+export { default as Receipt } from './Receipt';
+export { default as Share } from './Share';
+export { default as Car } from './Car';
+export { default as Envelope } from './Envelope';
+export { default as HomeIcon } from './HomeIcon';
+export { default as Location } from './Location';
+export { default as Luggage } from './Luggage';
+export { default as Telephone } from './Telephone';

@@ -51,7 +51,7 @@ export const fileExist = async (url: string) => {
 };
 
 export const getQueryStringIdPlatform = () => {
-  return Platform.OS === 'ios' ? 'APP_EP_IOS_02' : 'APP_EP_A_01';
+  return 'APP_EP_WEB_41';
 };
 
 export const platformSize = (ios: string, android: string) => {

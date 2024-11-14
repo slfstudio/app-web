@@ -302,7 +302,8 @@ export const majorHealthStepOneValidationSchema = yup.object().shape({
     .string()
     .min(2, ({ min }) => `Name must be at least ${min} characters`)
     .required('name_is_required'),
-  lastName: yup.string(),
+  lastName: yup.string().min(2, ({ min }) => `Last name must be at least ${min} characters`).required('lastname_is_required')
+  ,
   email: yup.string().email('please_enter_a_valid_email').required('email_is_required'),
   birthdate: yup
     .string()
