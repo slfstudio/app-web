@@ -266,7 +266,8 @@ export const fetchRecovery = createAsyncThunk(
   `${sliceName}/fetchRecovery`,
   async ({ email }, { getState, rejectWithValue }) => {
     try {
-      let response = await passwordRecovery({ params: email });
+      const params = `email=${email}&APP_ID=${getQueryStringIdPlatform()}`
+      let response = await passwordRecovery(params);
       if (response.data.status !== 'error') {
         return {};
       } else {

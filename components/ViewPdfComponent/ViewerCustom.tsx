@@ -135,7 +135,7 @@ const ViewerCustom: React.FC<ViewerCustomProps> = ({ ...props }) => {
   return error === false && url ? (
     <View className="flex-1">
       <WebViewCustom url={url} setLoading={setLoading} setError={setError} />
-      {loading && <Loading />}
+      {loading && <Loading withText={false} />}
       <View className="absolute w-full justify-end items-end">
         <View>
           <TouchableOpacity
