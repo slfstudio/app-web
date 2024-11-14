@@ -5,9 +5,9 @@ import { SquareImagesProps } from "./types";
 
 export default function SquareImages({image, imageTwo, imageThree, imageFour}:SquareImagesProps) {
     return (
-        <View className=" flex-row gap-2">
+        <View className="flex-1 flex-row items-center justify-center">
             {/* Left column */}
-            <View className="flex-1 gap-2">
+            <View className="gap-4">
                 <View className="flex-[0.35] rounded-[16px] overflow-hidden">
                     <Image 
                         className="h-full w-full" 
@@ -23,9 +23,10 @@ export default function SquareImages({image, imageTwo, imageThree, imageFour}:Sq
                     />
                 </View>
             </View>
+            <Spacing horizontal/>
             
             {/* Right column */}
-            <View className="flex-1 gap-2">
+            <View className="gap-4 ">
                 <View className="flex-[0.65] rounded-[16px] overflow-hidden">
                     <Image 
                         className="h-full w-full" 
