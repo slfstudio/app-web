@@ -32,7 +32,7 @@
     ],
     "experiments": {
       "typedRoutes": true,
-      "baseUrl": "/expat-dev"
+      "baseUrl": "/app-web"
 
     }
   }
