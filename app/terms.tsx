@@ -74,7 +74,7 @@ export default function Terms() {
 "Any other element or document that helps locate your personal data."
   ]
   return (
-    <Background>
+    <Background className='bg-white'>
       <View className="flex1 p-[60px]">
         <Text variant="Body-Medium-SemiBold" className="text-pink-light" >
           {t('info.terms_and_conditions')}

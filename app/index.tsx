@@ -6,28 +6,31 @@ import workingImg from '@/assets/images/home/working.png';
 import { useTranslation } from 'react-i18next';
 import Spacing from '@/components/Spacing';
 import CardImg from '@/components/CardImg';
-import familyImg from '@/assets/images/cards/family.png';
 import Button from '@/components/Button';
 import { useNavigation } from 'expo-router';
 import CircleImages from '@/components/CircleImages';
 import Background from '@/components/Background';
+import CarouselCustom from '@/components/Carousel';
+import familyImg from '@/assets/images/cards/family.png';
+
 export default function HomeScreen() {
   const { t } = useTranslation();
   const { navigate } = useNavigation<any>();
   return (
     <Background className="bg-white">
       <View className="flex-1">
-        <View className="flex-row h-[50%]">
-          <View className="flex-1  justify-center p-20  items-center">
-            <View className="items-center">
-              <Text variant="Heading-H1" className="text-dark">
-                {t('regards.good_morning')}
+        <View className="flex-row h-[50%] p-[20px]">
+          <View className="flex-1  justify-start  items-start">
+            <View >
+              <Text variant="Heading-H3" className="text-dark font-normal">
+                Welcome to
               </Text>
+              <Text variant='Heading-H1'>Expat Shield!</Text>
             </View>
             <View className="w-[380px] justify-center">
-              <View className="items-center">
+              <View >
                 <Spacing />
-                <Text className="text-center">{t('text.secure_your_peace_of_mind_with_a_quick')}</Text>
+                <Text className="text-justify">{t('text.secure_your_peace_of_mind_with_a_quick')}</Text>
                 <Spacing />
               </View>
 
@@ -50,31 +53,8 @@ export default function HomeScreen() {
           </Text>
           <Spacing />
 
-          <View className="flex-row">
-            <CardImg
-              title="Long title"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-              image={familyImg}
-            />
-            <Spacing horizontal />
-            <CardImg
-              title="Long title"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-              image={familyImg}
-            />
-            <Spacing horizontal />
-            <CardImg
-              title="Long title"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-              image={familyImg}
-            />
-            <Spacing horizontal />
-            <CardImg
-              title="Long title"
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-              image={familyImg}
-            />
-          </View>
+          
+            <CarouselCustom/>
         </View>
       </View>
     </Background>

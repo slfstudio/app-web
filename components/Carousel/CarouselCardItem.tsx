@@ -19,14 +19,13 @@ const CarouselCardItem = ({ item, index, setImageModal }: CarouselCardItemProps)
   const [itemLocal, setItemLocal] = useState<null | object>(null);
   const blurhash =
     '|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[';
-
   useEffect(() => {
     setItemLocal(item);
   }, [item.id]);
 
   if (itemLocal) {
     return (
-      <View className="bg-dark6 rounded-2xl w-[235] h-[120]" key={index}>
+      <View className="bg-dark6 rounded-2xl w-[355px] h-[220px]" key={index}>
         <TouchableOpacity
           onPress={() => {
             setImageModal({ uri: 'data:image/png;base64,' + itemLocal.item.imageBase64 });
