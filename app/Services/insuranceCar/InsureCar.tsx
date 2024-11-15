@@ -62,50 +62,68 @@ export default function InsureCarScreen() {
         >
           {({ handleChange, handleBlur, handleSubmit, values, errors, setFieldValue }) => (
             <>
-              <Input
-                label={t('label.name')}
-                error={errors.name}
-                onChangeText={handleChange?.('name')}
-                value={values.name}
-              />
-              <Spacing size="XL" />
-              <Input
-                value={values.email}
-                label={t('label.email')}
-                error={errors.email}
-                onChangeText={handleChange?.('email')}
-              />
-              <Spacing />
-              <View className="flex-row  justify-between">
-                <View className="w-[30%]">
-                  <Dropdown
-                    onSelect={(value) => setFieldValue('phone_code', value.value)}
-                    error={errors.phone_code}
-                    variant="phone"
-                    label={t('label.mobile_phone')}
-                    placeholder={t('placeholders.select')}
+              <View className="flex-row flex-wrap gap-4">
+                <View className="flex-1 min-w-[280px]">
+                  <Input
+                    label={t('label.name')}
+                    error={errors.name}
+                    onChangeText={handleChange?.('name')}
+                    value={values.name}
+                  />
+                </View>
+                <View className="flex-1 min-w-[280px]">
+                  <Input
+                    value={values.email}
+                    label={t('label.email')}
+                    error={errors.email}
+                    onChangeText={handleChange?.('email')}
                   />
                 </View>
 
-                <View className="w-[65%]">
+                <View className="flex-1 min-w-[280px]">
+                  <View className="flex-row  justify-between">
+                    <View className="w-[30%]">
+                      <Dropdown
+                        onSelect={(value) => setFieldValue('phone_code', value.value)}
+                        error={errors.phone_code}
+                        variant="phone"
+                        label={t('label.mobile_phone')}
+                        placeholder={t('placeholders.select')}
+                      />
+                    </View>
+
+                    <View className="w-[65%]">
+                      <Input
+                        value={values.phone}
+                        keyboardType="numeric"
+                        onChangeText={handleChange?.('phone')}
+                        error={errors.phone}
+                        maxLength={10}
+                      />
+                    </View>
+                  </View>
+                </View>
+                <View className="flex-1 min-w-[280px]">
                   <Input
-                    value={values.phone}
+                    label={t('label.zip_code')}
+                    value={values.postalCode}
+                    onChangeText={handleChange?.('postalCode')}
+                    error={errors.postalCode}
                     keyboardType="numeric"
-                    onChangeText={handleChange?.('phone')}
-                    error={errors.phone}
-                    maxLength={10}
+                    returnKeyType="done"
                   />
                 </View>
               </View>
+
               <Spacing size="L" />
-              <Spacing size="L" />
+
               <Input
-                label={t('label.zip_code')}
-                value={values.postalCode}
-                onChangeText={handleChange?.('postalCode')}
-                error={errors.postalCode}
-                keyboardType="numeric"
-                returnKeyType="done"
+                placeholder={t('placeholders.mm_dd_yyyy')}
+                label={t('label.birth_date')}
+                variant="date"
+                value={values.birthdate}
+                onChangeText={handleChange?.('birthdate')}
+                error={errors.birthdate}
               />
               <Spacing size="L" />
 
@@ -118,15 +136,6 @@ export default function InsureCarScreen() {
                 value={values.gender}
                 error={errors.gender}
                 label={t('label.gender')}
-              />
-              <Spacing size="L" />
-              <Input
-                placeholder={t('placeholders.mm_dd_yyyy')}
-                label={t('label.birth_date')}
-                variant="date"
-                value={values.birthdate}
-                onChangeText={handleChange?.('birthdate')}
-                error={errors.birthdate}
               />
 
               <Spacing size="L" />

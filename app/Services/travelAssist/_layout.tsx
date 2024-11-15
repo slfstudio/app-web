@@ -7,19 +7,12 @@ const TravelAssistStack = () => {
   const { t } = useTranslation();
   return (
     <Stack>
-      <Stack.Screen
-        name="QuoteInfoTravel"
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="TravelTermsPolicy"
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen
-        name="index"
-        options={{ headerShown: false }}
-      />
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+
+      <Stack.Screen name="TravelTermsPolicy" options={{ headerShown: false }} />
       <Stack.Screen name="LoadingScreen" options={{ headerShown: false }} />
+
+      <Stack.Screen name="QuoteInfoTravel" options={{ headerShown: false }} />
     </Stack>
   );
 };

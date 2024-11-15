@@ -25,7 +25,10 @@ export default function InsuranceHomeSteps() {
   const [currentStep, setCurrentStep] = useState(0);
   const {t} = useTranslation()
   const navigation = useNavigation<any>();
-  const steps = [<InsureHomeScreen onStepChange={() => changeStep(1)} />, <HomeInfoScreen />];
+  const steps = [
+  <InsureHomeScreen onStepChange={() => changeStep(1)} />, 
+  <HomeInfoScreen />
+];
   const dispatch = useDispatch();
   const changeStep = (newStep: number) => {
     if (newStep >= 0 && newStep < steps.length) {
@@ -59,7 +62,7 @@ export default function InsuranceHomeSteps() {
             <StepProgress steps={steps} currentStep={currentStep} onStepChange={changeStep} />;
           </Paper>
         </View>
-        <View className="flex-1 hidden md:flex">
+        <View className="flex-1 hidden lg:flex">
           <SquareImages image={img1} imageThree={img2} imageTwo={img3} imageFour={img4} />
         </View>
       </View>

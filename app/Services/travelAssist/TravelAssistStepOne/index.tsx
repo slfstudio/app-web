@@ -109,22 +109,27 @@ export default function TravelAssistStepOne({ onStepChange }) {
       >
         {({ handleChange, handleBlur, handleSubmit, values, errors, setFieldValue }) => (
           <>
-            <Input
-              label={t('label.birth_date')}
-              variant="date"
-              placeholder={t('placeholders.mm_dd_yyyy')}
-              value={values.birthdate}
-              onChangeText={handleChange?.('birthdate')}
-              error={errors.birthdate}
-            />
-            <Spacing />
-            <Dropdown
-              data={travelDestination}
-              label={t('label.travel_destination')}
-              placeholder={t('placeholders.select')}
-              error={errors?.destination}
-              onSelect={(value) => setFieldValue('destination', value.label)}
-            />
+            <View className="flex-row flex-wrap gap-4">
+              <View className="flex-1 min-w-[280px]">
+                <Input
+                  label={t('label.birth_date')}
+                  variant="date"
+                  placeholder={t('placeholders.mm_dd_yyyy')}
+                  value={values.birthdate}
+                  onChangeText={handleChange?.('birthdate')}
+                  error={errors.birthdate}
+                />
+              </View>
+              <View className="flex-1 min-w-[280px]">
+                <Dropdown
+                  data={travelDestination}
+                  label={t('label.travel_destination')}
+                  placeholder={t('placeholders.select')}
+                  error={errors?.destination}
+                  onSelect={(value) => setFieldValue('destination', value.label)}
+                />
+              </View>
+            </View>
             <Spacing />
             <Dropdown
               variant="info"
@@ -136,23 +141,31 @@ export default function TravelAssistStepOne({ onStepChange }) {
               error={errors?.idPlanDetail}
             />
             <Spacing />
-            <Input
-              label={t('label.start_date_mm_dd_yyyy')}
-              variant="date"
-              placeholder={t('placeholders.mm_dd_yyyy')}
-              value={values.start_date}
-              onChangeText={handleChange?.('start_date')}
-              error={errors.start_date}
-            />
+            <View className="flex-row flex-wrap gap-4">
+              <View className="flex-1 min-w-[280px]">
+                <Input
+                  label={t('label.start_date_mm_dd_yyyy')}
+                  variant="date"
+                  placeholder={t('placeholders.mm_dd_yyyy')}
+                  value={values.start_date}
+                  onChangeText={handleChange?.('start_date')}
+                  error={errors.start_date}
+                />
+              </View>
+              <View className="flex-1 min-w-[280px]">
+                <Input
+                  label={t('label.end_date_mm_dd_yyyy')}
+                  variant="date"
+                  placeholder={t('placeholders.mm_dd_yyyy')}
+                  value={values.end_date}
+                  onChangeText={handleChange?.('end_date')}
+                  error={errors.end_date}
+                />
+              </View>
+            </View>
+
             <Spacing />
-            <Input
-              label={t('label.end_date_mm_dd_yyyy')}
-              variant="date"
-              placeholder={t('placeholders.mm_dd_yyyy')}
-              value={values.end_date}
-              onChangeText={handleChange?.('end_date')}
-              error={errors.end_date}
-            />
+
             <Spacing size="S" />
             <Text variant="Body-Medium-Regular" className="text-pink-light">
               {t('label.total_amount_of_days')}
