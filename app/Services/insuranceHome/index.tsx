@@ -25,7 +25,10 @@ export default function InsuranceHomeSteps() {
   const [currentStep, setCurrentStep] = useState(0);
   const {t} = useTranslation()
   const navigation = useNavigation<any>();
-  const steps = [<InsureHomeScreen onStepChange={() => changeStep(1)} />, <HomeInfoScreen />];
+  const steps = [
+  <InsureHomeScreen onStepChange={() => changeStep(1)} />, 
+  <HomeInfoScreen />
+];
   const dispatch = useDispatch();
   const changeStep = (newStep: number) => {
     if (newStep >= 0 && newStep < steps.length) {

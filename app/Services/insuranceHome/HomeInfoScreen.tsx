@@ -91,43 +91,50 @@ export default function HomeInfoScreen() {
           {({ handleChange, handleBlur, handleSubmit, values, errors, setFieldValue, setValues }) => {
             return (
               <>
-                <View>
-                  <View className="flex-row  justify-between">
-                    <View className="w-[30%]">
-                      <Dropdown
-                        onSelect={(value) => setFieldValue('phone_code', value.value)}
-                        error={errors.phone_code}
-                        variant="phone"
-                        label={t('label.mobile_phone')}
-                        placeholder={t('placeholders.select')}
-                      />
-                    </View>
-
-                    <View className="w-[65%]">
-                      <Input
-                        value={values.phone}
-                        onChangeText={handleChange?.('phone')}
-                        error={errors.phone}
-                        keyboardType="numeric"
-                        returnKeyType="done"
-                        maxLength={10}
-                      />
-                    </View>
+                <View className="flex-row flex-wrap gap-4">
+                  <View className="flex-1 min-w-[280px]">
+                    {' '}
+                    <Input
+                      label={t('label.name')}
+                      value={values.name}
+                      onChangeText={handleChange?.('name')}
+                      error={errors.name}
+                    />
                   </View>
-                  <Input
-                    label={t('label.name')}
-                    value={values.name}
-                    onChangeText={handleChange?.('name')}
-                    error={errors.name}
-                  />
-                  <Spacing size="M" />
-                  <Input
-                    label={t('label.email')}
-                    value={values.email}
-                    onChangeText={handleChange?.('email')}
-                    error={errors.email}
-                  />
+                  <View className="flex-1 min-w-[280px]">
+                    <Input
+                      label={t('label.email')}
+                      value={values.email}
+                      onChangeText={handleChange?.('email')}
+                      error={errors.email}
+                    />
+                  </View>
                 </View>
+                <Spacing size="M" />
+
+                <View className="flex-row  justify-between">
+                  <View className="w-[30%]">
+                    <Dropdown
+                      onSelect={(value) => setFieldValue('phone_code', value.value)}
+                      error={errors.phone_code}
+                      variant="phone"
+                      label={t('label.mobile_phone')}
+                      placeholder={t('placeholders.select')}
+                    />
+                  </View>
+
+                  <View className="w-[65%]">
+                    <Input
+                      value={values.phone}
+                      onChangeText={handleChange?.('phone')}
+                      error={errors.phone}
+                      keyboardType="numeric"
+                      returnKeyType="done"
+                      maxLength={10}
+                    />
+                  </View>
+                </View>
+
                 <Spacing size="L" />
                 <View>
                   <Spacing />
