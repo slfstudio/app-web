@@ -59,7 +59,7 @@ export default function InsuranceHomeSteps() {
             <StepProgress steps={steps} currentStep={currentStep} onStepChange={changeStep} />;
           </Paper>
         </View>
-        <View className="flex-1 hidden md:flex">
+        <View className="flex-1 hidden lg:flex">
           <SquareImages image={img1} imageThree={img2} imageTwo={img3} imageFour={img4} />
         </View>
       </View>

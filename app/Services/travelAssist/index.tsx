@@ -23,7 +23,7 @@ export default function TravelSteps() {
   const navigation = useNavigation();
   const {t} = useTranslation();
   const steps = [
-    <TravelAssistStepOne onStepChange={() => changeStep(1)} />,
+     <TravelAssistStepOne onStepChange={() => changeStep(1)} />,
     <TravelAssistStepTwo onStepChange={() => changeStep(2)} />,
     <TravelAssistStepThree onStepChange={() => changeStep(0)} />,
   ];

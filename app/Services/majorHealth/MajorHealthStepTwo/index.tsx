@@ -61,7 +61,7 @@ export default function MajorHealthStepTwo() {
         </Text>
       </View>
       <Spacing />
-      {rates.plans.map((item, index) => (
+      {[].map((item, index) => (
         <>
           <RatesDropdown title={item.name} rateItem={item} variant={item.code === 'EPINT' ? 'premium' : 'solution'} />
           <Spacing />

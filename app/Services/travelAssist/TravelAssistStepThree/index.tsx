@@ -91,21 +91,27 @@ export default function TravelAssistStepThree() {
         {({ handleSubmit, values, errors, setFieldValue }) => {
           return (
             <>
-              <Dropdown
-                label={t('label.maximum_coverage')}
-                placeholder={t('placeholders.select')}
-                data={dataDropdown['maximumCoverage']}
-                error={errors?.maximum_coverage}
-                onSelect={(value) => setFieldValue('maximum_coverage', value.value)}
-              />
-              <Spacing />
-              <Dropdown
-                label={t('label.deductible')}
-                placeholder={t('placeholders.select')}
-                data={dataDropdown['deductible']}
-                error={errors?.deductible}
-                onSelect={(value) => setFieldValue('deductible', value.value)}
-              />
+              <View className="flex-row flex-wrap gap-4">
+                <View className="flex-1 min-w-[280px]">
+                  <Dropdown
+                    label={t('label.maximum_coverage')}
+                    placeholder={t('placeholders.select')}
+                    data={dataDropdown['maximumCoverage']}
+                    error={errors?.maximum_coverage}
+                    onSelect={(value) => setFieldValue('maximum_coverage', value.value)}
+                  />
+                </View>
+                <View className="flex-1 min-w-[280px]">
+                  <Dropdown
+                    label={t('label.deductible')}
+                    placeholder={t('placeholders.select')}
+                    data={dataDropdown['deductible']}
+                    error={errors?.deductible}
+                    onSelect={(value) => setFieldValue('deductible', value.value)}
+                  />
+                </View>
+              </View>
+
               <Spacing />
               <Dropdown
                 label={t('label.trip_cancellation_due_to_catastrophic_event')}

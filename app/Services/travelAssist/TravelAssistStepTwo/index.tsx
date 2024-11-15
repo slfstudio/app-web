@@ -55,47 +55,55 @@ export default function TravelAssistStepTwo({ onStepChange }) {
       >
         {({ handleChange, handleBlur, handleSubmit, values, errors, setFieldValue }) => (
           <>
-            <Input
-              label={t('label.first_name')}
-              value={values.name}
-              onChangeText={handleChange?.('name')}
-              error={errors.name}
-            />
-            <Spacing />
-            <Input
-              label={t('label.last_name')}
-              value={values.lastName}
-              onChangeText={handleChange?.('lastName')}
-              error={errors.lastName}
-            />
-            <Spacing />
-            <Input
-              label={t('label.email')}
-              value={values.email}
-              onChangeText={handleChange?.('email')}
-              error={errors.email}
-            />
-            <Spacing />
-            <View className="flex-row  justify-between">
-              <View className="w-[30%]">
-                <Dropdown
-                  onSelect={(value) => setFieldValue('phone_code', value.value)}
-                  error={errors.phone_code}
-                  variant="phone"
-                  label={t('label.mobile_phone')}
-                  placeholder={t('placeholders.select')}
+            <View className="flex-row flex-wrap gap-4">
+              <View className="flex-1 min-w-[280px]">
+                <Input
+                  label={t('label.first_name')}
+                  value={values.name}
+                  onChangeText={handleChange?.('name')}
+                  error={errors.name}
                 />
               </View>
-
-              <View className="w-[65%]">
+              <View className="flex-1 min-w-[280px]">
                 <Input
-                  keyboardType="numeric"
-                  onChangeText={handleChange?.('phone')}
-                  error={errors.phone}
-                  maxLength={10}
+                  label={t('label.last_name')}
+                  value={values.lastName}
+                  onChangeText={handleChange?.('lastName')}
+                  error={errors.lastName}
                 />
+              </View>
+              <View className="flex-1 min-w-[280px]">
+                <Input
+                  label={t('label.email')}
+                  value={values.email}
+                  onChangeText={handleChange?.('email')}
+                  error={errors.email}
+                />
+              </View>
+              <View className="flex-1 min-w-[280px]">
+                <View className="flex-row  justify-between">
+                  <View className="w-[30%]">
+                    <Dropdown
+                      onSelect={(value) => setFieldValue('phone_code', value.value)}
+                      error={errors.phone_code}
+                      variant="phone"
+                      label={t('label.mobile_phone')}
+                      placeholder={t('placeholders.select')}
+                    />
+                  </View>
+
+                  <View className="w-[65%]">
+                    <Input
+                      keyboardType="numeric"
+                      onChangeText={handleChange?.('phone')}
+                      error={errors.phone}
+                      maxLength={10}
+                    />
+                  </View>
+                </View>
               </View>
             </View>
+
             <Spacing />
             <Dropdown
               data={countryCatalog}
