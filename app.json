@@ -3,6 +3,7 @@
     "name": "expat-web",
     "slug": "expat-web",
     "version": "1.0.0",
+
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -30,7 +31,9 @@
       "expo-router"
     ],
     "experiments": {
-      "typedRoutes": true
+      "typedRoutes": true,
+      "baseUrl": "/expat-dev"
+
     }
   }
 }
