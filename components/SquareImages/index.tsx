@@ -5,17 +5,17 @@ import { SquareImagesProps } from "./types";
 
 export default function SquareImages({image, imageTwo, imageThree, imageFour}:SquareImagesProps) {
     return (
-        <View className="flex-1 flex-row items-center justify-center">
+        <View className="flex-1 flex-col md:flex-row p-10 justify-center gap-4 md:gap-2">
             {/* Left column */}
-            <View className="gap-4">
-                <View className="flex-[0.35] rounded-[16px] overflow-hidden">
+            <View className="w-full md:w-1/2 gap-4">
+                <View className="h-48 md:h-64 lg:h-80 rounded-[16px] overflow-hidden">
                     <Image 
                         className="h-full w-full" 
                         source={image}
                         resizeMode="cover"
                     />
                 </View>
-                <View className="flex-[0.65] rounded-[16px] overflow-hidden">
+                <View className="h-64 md:h-80 lg:h-96 rounded-[16px] overflow-hidden">
                     <Image 
                         className="h-full w-full" 
                         source={imageTwo}
@@ -23,18 +23,17 @@ export default function SquareImages({image, imageTwo, imageThree, imageFour}:Sq
                     />
                 </View>
             </View>
-            <Spacing horizontal/>
             
             {/* Right column */}
-            <View className="gap-4 ">
-                <View className="flex-[0.65] rounded-[16px] overflow-hidden">
+            <View className="w-full md:w-1/2 gap-4">
+                <View className="h-64 md:h-80 lg:h-96 rounded-[16px] overflow-hidden">
                     <Image 
                         className="h-full w-full" 
                         source={imageThree}
                         resizeMode="cover"
                     />
                 </View>
-                <View className="flex-[0.35] rounded-[16px] overflow-hidden">
+                <View className="h-48 md:h-64 lg:h-80 rounded-[16px] overflow-hidden">
                     <Image 
                         className="h-full w-full" 
                         source={imageFour}

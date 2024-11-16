@@ -9,7 +9,7 @@ const getEnv = (prod: boolean = false) => {
   return  'https://dev_bts_services.bajatuseguro.com';
 };
 const api = axios.create({
-  baseURL: getEnv(false),
+  baseURL: getEnv(true),
   headers: {
     'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
   },

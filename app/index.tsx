@@ -19,15 +19,15 @@ export default function HomeScreen() {
   return (
     <Background className="bg-white">
       <View className="flex-1">
-        <View className="flex-row h-[50%] p-[20px]">
-          <View className="flex-1  justify-start  items-start">
-            <View >
-              <Text variant="Heading-H3" className="text-dark font-normal">
+        <View className="flex-col md:flex-row h-auto md:h-[50%] p-[20px]">
+          <View className="flex-1 justify-start items-center md:items-start">
+            <View>
+              <Text variant="Heading-H3" className="text-dark font-normal text-center md:text-left">
                 Welcome to
               </Text>
-              <Text variant='Heading-H1'>Expat Shield!</Text>
+              <Text variant='Heading-H1' className="text-center md:text-left">Expat Shield!</Text>
             </View>
-            <View className="w-[380px] justify-center">
+            <View className="w-full md:w-[380px] justify-center">
               <View >
                 <Spacing />
                 <Text className="text-justify">{t('text.secure_your_peace_of_mind_with_a_quick')}</Text>
@@ -43,7 +43,7 @@ export default function HomeScreen() {
               <Button variant="border" text={t('headers.log_in')} onPress={() => navigate('Auth')} />
             </View>
           </View>
-          <View className="flex-1 ">
+          <View className="hidden md:flex flex-1">
             <CircleImages image={beachImg} imagetwo={churchImg} imagethree={workingImg} />
           </View>
         </View>
